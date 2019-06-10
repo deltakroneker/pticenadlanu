@@ -12,14 +12,14 @@ PODS:
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.5.0)
-  - SwiftCSV (0.3.2)
+  - SwiftCSV (0.5.0)
 
 DEPENDENCIES:
   - RealmSwift
   - RxCocoa (~> 4.0)
   - RxDataSources (~> 3.0)
   - RxSwift (~> 4.0)
-  - SwiftCSV
+  - SwiftCSV (~> 0.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -38,8 +38,8 @@ SPEC CHECKSUMS:
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
-  SwiftCSV: 8b64b738fc54567d229acb17ce6d584e0dd27560
+  SwiftCSV: 9e4b60886a4ef4cabc8ffa04076c23113b1d046d
 
-PODFILE CHECKSUM: 057eb56eb4c5abddb995cdcfd52592f5e1f163d4
+PODFILE CHECKSUM: 904fda8ff0fd8abbfaa3529d677bf86ac0805294
 
 COCOAPODS: 1.5.3

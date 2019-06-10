@@ -10,11 +10,12 @@
 		D202E03D225DF0E500F6CE57 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202E03C225DF0E500F6CE57 /* Shape.swift */; };
 		D202E040225E002300F6CE57 /* PickerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202E03F225E002300F6CE57 /* PickerItemCell.swift */; };
 		D202E042225E070200F6CE57 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202E041225E070200F6CE57 /* Location.swift */; };
-		D202E044225E080D00F6CE57 /* FatherColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202E043225E080D00F6CE57 /* FatherColor.swift */; };
+		D202E044225E080D00F6CE57 /* FeatherColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202E043225E080D00F6CE57 /* FeatherColor.swift */; };
 		D202E04A225E1DF600F6CE57 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D202E047225E1DF500F6CE57 /* OpenSans-Regular.ttf */; };
 		D202E04B225E1DF600F6CE57 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D202E048225E1DF600F6CE57 /* OpenSans-SemiBold.ttf */; };
 		D202E04C225E1DF600F6CE57 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D202E049225E1DF600F6CE57 /* OpenSans-Bold.ttf */; };
-		D22DA43D22804E910044E109 /* scheme.csv in Resources */ = {isa = PBXBuildFile; fileRef = D22DA43C22804E910044E109 /* scheme.csv */; };
+		D206CCE62280589500CF38E5 /* scheme.json in Resources */ = {isa = PBXBuildFile; fileRef = D206CCE52280589400CF38E5 /* scheme.json */; };
+		D206CCE82280870500CF38E5 /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CCE72280870500CF38E5 /* Scheme.swift */; };
 		D2B2CA502268DA1C00DED1E2 /* ItemGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2CA4F2268DA1C00DED1E2 /* ItemGradientLayer.swift */; };
 		D2E985B4225DDE7400C7994C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E985B3225DDE7400C7994C /* AppDelegate.swift */; };
 		D2E985B9225DDE7400C7994C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2E985B7225DDE7400C7994C /* Home.storyboard */; };
@@ -35,11 +36,12 @@
 		D202E03C225DF0E500F6CE57 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		D202E03F225E002300F6CE57 /* PickerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerItemCell.swift; sourceTree = "<group>"; };
 		D202E041225E070200F6CE57 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		D202E043225E080D00F6CE57 /* FatherColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatherColor.swift; sourceTree = "<group>"; };
+		D202E043225E080D00F6CE57 /* FeatherColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatherColor.swift; sourceTree = "<group>"; };
 		D202E047225E1DF500F6CE57 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		D202E048225E1DF600F6CE57 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		D202E049225E1DF600F6CE57 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
-		D22DA43C22804E910044E109 /* scheme.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = scheme.csv; sourceTree = "<group>"; };
+		D206CCE52280589400CF38E5 /* scheme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = scheme.json; sourceTree = SOURCE_ROOT; };
+		D206CCE72280870500CF38E5 /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
 		D2B2CA4F2268DA1C00DED1E2 /* ItemGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGradientLayer.swift; sourceTree = "<group>"; };
 		D2E985B0225DDE7400C7994C /* ptice-na-dlanu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ptice-na-dlanu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E985B3225DDE7400C7994C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,7 +92,8 @@
 			children = (
 				D202E03C225DF0E500F6CE57 /* Shape.swift */,
 				D202E041225E070200F6CE57 /* Location.swift */,
-				D202E043225E080D00F6CE57 /* FatherColor.swift */,
+				D202E043225E080D00F6CE57 /* FeatherColor.swift */,
+				D206CCE72280870500CF38E5 /* Scheme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,7 +148,7 @@
 		D2E985B2225DDE7400C7994C /* ptice-na-dlanu */ = {
 			isa = PBXGroup;
 			children = (
-				D22DA43C22804E910044E109 /* scheme.csv */,
+				D206CCE52280589400CF38E5 /* scheme.json */,
 				D2E985B3225DDE7400C7994C /* AppDelegate.swift */,
 				D2E985C5225DE8A200C7994C /* Coordinators */,
 				D2E985CC225DE8E700C7994C /* UI */,
@@ -258,8 +261,8 @@
 				D202E04C225E1DF600F6CE57 /* OpenSans-Bold.ttf in Resources */,
 				D202E04B225E1DF600F6CE57 /* OpenSans-SemiBold.ttf in Resources */,
 				D202E04A225E1DF600F6CE57 /* OpenSans-Regular.ttf in Resources */,
+				D206CCE62280589500CF38E5 /* scheme.json in Resources */,
 				D2FD4FCD226CCFF5003F4987 /* Assets.xcassets in Resources */,
-				D22DA43D22804E910044E109 /* scheme.csv in Resources */,
 				D2E985B9225DDE7400C7994C /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,13 +337,14 @@
 				D202E042225E070200F6CE57 /* Location.swift in Sources */,
 				D2E985CF225DE92D00C7994C /* HomeViewController.swift in Sources */,
 				D2B2CA502268DA1C00DED1E2 /* ItemGradientLayer.swift in Sources */,
+				D206CCE82280870500CF38E5 /* Scheme.swift in Sources */,
 				D202E040225E002300F6CE57 /* PickerItemCell.swift in Sources */,
 				D2E985D1225DEA1200C7994C /* HomeViewModel.swift in Sources */,
 				D2E985CB225DE8A200C7994C /* Coordinator.swift in Sources */,
 				D2E985C9225DE8A200C7994C /* AppCoordinator.swift in Sources */,
 				D2E985B4225DDE7400C7994C /* AppDelegate.swift in Sources */,
 				D2E985CA225DE8A200C7994C /* Storyboarded.swift in Sources */,
-				D202E044225E080D00F6CE57 /* FatherColor.swift in Sources */,
+				D202E044225E080D00F6CE57 /* FeatherColor.swift in Sources */,
 				D2E985D4225DEA6600C7994C /* ViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

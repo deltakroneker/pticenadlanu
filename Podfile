@@ -10,5 +10,5 @@ target 'ptice-na-dlanu' do
   pod 'RxCocoa',    '~> 4.0'
   pod 'RxDataSources', '~> 3.0'
   pod 'RealmSwift'
-  pod "SwiftCSV"
+  pod 'SwiftCSV', '~> 0.5'
 end

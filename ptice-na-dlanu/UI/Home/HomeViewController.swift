@@ -58,6 +58,8 @@ class HomeViewController: UIViewController, Storyboarded {
         locationCollectionView.delegate = self
         setupController()
         setupBindings()
+        
+        viewModel.numberOfBirds(for: .black, .golub, in: .naselje)
     }
     
     override func viewDidLayoutSubviews() {

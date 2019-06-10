@@ -41,6 +41,8 @@ class HomeViewModel {
         let buttonText = colorSelected.asObservable()
             .map { $0 == nil ? "0 REZULTATA" : $0!.rawValue }
         
+        
+        
         return Output(newShapeData: shapeDataSource,
                       newLocationData: locationDataSource,
                       isButtonEnabled: isButtonEnabled,
@@ -52,6 +54,16 @@ class HomeViewModel {
 extension HomeViewModel {
     
     func numberOfBirds(for color: FeatherColor, _ bird: BirdShape, in location: BirdLocation) -> Int {
+        do {
+            if let path = Bundle.main.path(forResource: "scheme", ofType: "json") {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let json = try JSONDecoder().decode([Scheme].self, from: data)
+                print(json)
+            }
+        } catch {
+            
+        }
         
+        return 0
     }
 }
