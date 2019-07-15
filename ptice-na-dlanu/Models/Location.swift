@@ -18,6 +18,20 @@ enum BirdLocation: String, CaseIterable {
     case voda             = "f_vodena"
     case zbun             = "f_sikare"
     case mesovitiPredeo   = "f_mesovita"
+    
+    static func fromScheme(name: String) -> BirdLocation? {
+        switch name {
+        case "naselja":                     return .naselje
+        case "njive":                       return .njiva
+        case "sume":                        return .suma
+        case "kamenjari, litice i odseci":  return .liticaKamenjar
+        case "travnjaci":                   return .livada
+        case "vodena stanista":             return .voda
+        case "sikare i zbunjaci":           return .zbun
+        case "mesovita stanista":           return .mesovitiPredeo
+        default:                            return .all
+        }
+    }
 }
 
 struct LocationItem: Item {

@@ -22,6 +22,24 @@ enum BirdShape: String, CaseIterable {
     case barskaKoka     = "f_sljukarice"
     case sova           = "f_sove"
     case vrana          = "f_vranolike"
+    
+    static func fromScheme(name: String) -> BirdShape? {
+        switch name {
+        case "Capljolike ptice":            return .capljaRoda
+        case "Detlici":                     return .detlic
+        case "Dnevne grabljivice":          return .grabljivica
+        case "Galebovi i cigre":            return .galeb
+        case "Golubolike ptice":            return .golub
+        case "Kokosi i droplje":            return .fazanKokoska
+        case "Laste i ciope":               return .lasta
+        case "Patkolike ptice":             return .patkaLabud
+        case "Ptice pevacice":              return .vrabac
+        case "Sljukarice i barske koke":    return .barskaKoka
+        case "Sove":                        return .sova
+        case "Vranolike ptice":             return .vrana
+        default:                            return .all
+        }
+    }
 }
 
 struct ShapeItem: Item  {

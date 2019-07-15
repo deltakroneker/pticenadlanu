@@ -38,23 +38,21 @@ enum FeatherColor: String, CaseIterable {
     
     static func fromScheme(name: String) -> FeatherColor? {
         switch name {
-        case "crna": return .black
-        case "braon": return .brown
-        case "bez": return .beige
-        case "siva": return .grey
-        case "bela": return .white
-        case "zuto": return .yellow
-        case "narandzasta": return .orange
-        case "crvena": return .red
-        case "plava": return .blue
-        case "zelena": return .green
-        default: return nil
+        case "crna":          return .black
+        case "braon":         return .brown
+        case "bez":           return .beige
+        case "siva":          return .grey
+        case "bela":          return .white
+        case "zuto":          return .yellow
+        case "narandzasta":   return .orange
+        case "crvena":        return .red
+        case "plava":         return .blue
+        case "zelena":        return .green
+        default :             return nil
         }
     }
     
     func asInt() -> Int {
         return FeatherColor.allCases.firstIndex(of: self)!
     }
-    
-    
 }

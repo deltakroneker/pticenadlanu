@@ -19,7 +19,8 @@ class AppCoordinator: Coordinator {
         if let green = UIColor(named: "colorPrimary") {
             navigationController.navigationBar.isTranslucent = false
             navigationController.navigationBar.barTintColor = green
-            navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "OpenSans-SemiBold", size: 18)!]
+            navigationController.navigationBar.tintColor = .white
+            navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "OpenSans-SemiBold", size: 20)!]
         }
     }
     
@@ -34,14 +35,20 @@ class AppCoordinator: Coordinator {
 
 extension AppCoordinator {
     
-//    func showListOfGenres() {
-//        guard let mainVC = self.navigationController.viewControllers.first as? MainViewController,
-//            let mainVM = mainVC.viewModel else { return }
-//        
-//        let vc = ListViewController.instantiate(from: .main)
-//        vc.coordinator = self
-//        vc.viewModel = ListViewModel(allGenres: mainVM.allGenres)
-//        vc.title = "All genres"
-//        navigationController.pushViewController(vc, animated: true)
-//    }
+    func resultButtonPressed(_ title: String, _ birds: [BirdItem]) {
+        let vc = ListViewController.instantiate(from: .list)
+        vc.coordinator = self
+        vc.viewModel = ListViewModel()
+        vc.viewModel.matchedBirds.accept(birds)
+        vc.title = title
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func birdItemPressed(item: BirdItem) {
+        let vc = DetailsViewController.instantiate(from: .details)
+        vc.coordinator = self
+        vc.viewModel = DetailsViewModel()
+        vc.title = item.bird.srpskiNazivVrste
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

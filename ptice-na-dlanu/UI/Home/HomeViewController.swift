@@ -13,6 +13,8 @@ import RxDataSources
 
 class HomeViewController: UIViewController, Storyboarded {
 
+    // MARK: - Outlets
+    
     @IBOutlet weak var shapeCollectionView: UICollectionView!
     @IBOutlet weak var shapeContainerView: UIView!
     
@@ -21,13 +23,14 @@ class HomeViewController: UIViewController, Storyboarded {
     
     @IBOutlet var lineViews: [UIView]!
     @IBOutlet var featherColorButtons: [UIButton]!
-    
     @IBOutlet weak var resultButton: UIButton!
+    
+    // MARK: - Vars & Lets
     
     let shapeGradientLayer = ItemGradientLayer()
     let locationGradientLayer = ItemGradientLayer()
     
-    let widthPercent: CGFloat = 0.4
+    let widthPercent: CGFloat = 0.5
     
     weak var coordinator: AppCoordinator?
     var viewModel: HomeViewModel!
@@ -46,11 +49,8 @@ class HomeViewController: UIViewController, Storyboarded {
         cell.viewModel = locationVM
         return cell
     })
-
-    convenience init(viewModel: HomeViewModel) {
-        self.init()
-        self.viewModel = viewModel
-    }
+    
+    // MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,8 +58,6 @@ class HomeViewController: UIViewController, Storyboarded {
         locationCollectionView.delegate = self
         setupController()
         setupBindings()
-        
-        viewModel.numberOfBirds(for: .black, .golub, in: .naselje)
     }
     
     override func viewDidLayoutSubviews() {
@@ -68,8 +66,10 @@ class HomeViewController: UIViewController, Storyboarded {
         locationGradientLayer.frame = locationContainerView.bounds
     }
     
+    // MARK: - Methods
+    
     fileprivate func setupController() {
-        for view in lineViews { view.layer.cornerRadius = view.frame.height/2 }
+        for view in lineViews { view.layer.cornerRadius = view.frame.height / 2 }
         for button in featherColorButtons {
             guard let imageName = FeatherColor.fromTag(tag: button.tag)?.rawValue,
                 let image = UIImage(named: imageName) else { return }
@@ -80,7 +80,35 @@ class HomeViewController: UIViewController, Storyboarded {
     }
     
     fileprivate func setupBindings() {
-        let output = viewModel.transform(input: nil)
+        
+        let shapeDragging = shapeCollectionView.rx.didEndDragging.filter { $0 == false }
+        let shapeScrolling = shapeCollectionView.rx.didEndScrollingAnimation
+        
+        let shapeInput = Observable
+            .combineLatest(shapeDragging, shapeScrolling)
+            .map { (_,_) -> Void in return () }
+            .map { [weak self] () -> BirdShape? in
+                guard let indexPath = self?.shapeCollectionView.centerCellIndexPath,
+                    let cell = self?.shapeCollectionView.cellForItem(at: indexPath) as? PickerItemCell,
+                    let item = cell.viewModel as? ShapeItem else { return nil }
+                return item.shape
+            }.startWith(.all)
+        
+        let locationDragging = locationCollectionView.rx.didEndDragging.filter { $0 == false }
+        let locationScrolling = locationCollectionView.rx.didEndScrollingAnimation
+        
+        let locationInput = Observable
+            .combineLatest(locationDragging, locationScrolling)
+            .map { (_,_) -> Void in return () }
+            .map { [weak self] () -> BirdLocation? in
+                guard let indexPath = self?.locationCollectionView.centerCellIndexPath,
+                    let cell = self?.locationCollectionView.cellForItem(at: indexPath) as? PickerItemCell,
+                    let item = cell.viewModel as? LocationItem else { return nil }
+                return item.location
+            }.startWith(.all)
+        
+        let input = HomeViewModel.Input(shape: shapeInput, location: locationInput)
+        let output = viewModel.transform(input: input)
         
         output.newShapeData
             .bind(to: shapeCollectionView.rx.items(dataSource: shapeDataSource))
@@ -98,56 +126,72 @@ class HomeViewController: UIViewController, Storyboarded {
             .bind(to: resultButton.rx.title(for: .normal))
             .disposed(by: bag)
         
+        self.viewModel.selectedColors.accept([])
+        
         for button in featherColorButtons {
             button.rx.tap
-                .map { button.isSelected ? false : true }
-                .map { $0 == true ? FeatherColor.fromTag(tag: button.tag) : nil }
-                .bind(to: viewModel.colorSelected)
-                .disposed(by: bag)
+                .map { FeatherColor.fromTag(tag: button.tag) }
+                .subscribe(onNext: { [weak self] in
+                    guard let self = self, let newColor = $0 else { return}
+                    var colors = self.viewModel.selectedColors.value
+                    
+                    if Set(colors).contains(newColor) {
+                        guard let position = colors.firstIndex(of: newColor) else { return }
+                        colors.remove(at: position)
+                    } else {
+                        colors.append(newColor)
+                    }
+                    self.viewModel.selectedColors.accept(colors)
+                }).disposed(by: bag)
         }
         
-        viewModel.colorSelected
-            .debug()
-            .subscribe(onNext: { [weak self] color in
-                let tag = color?.asInt()
-                let buttons = self?.featherColorButtons.filter {
-                    $0.tag == tag ? true : false
+        viewModel.selectedColors
+            .subscribe(onNext: { [weak self] colors in
+                guard let self = self else { return }
+                let tags = colors.map { $0.asInt() }
+                let selectedButtons = self.featherColorButtons.filter { tags.contains($0.tag) }
+                let nonSelectedButtons = self.featherColorButtons.filter { !tags.contains($0.tag) }
+                selectedButtons.forEach {
+                    $0.isSelected = true
+                    $0.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
                 }
-                if let button = buttons?.first {
-                    button.isSelected = !button.isSelected
-                    if button.isSelected {
-                        self?.featherColorButtons
-                            .filter { $0 == button ? false : true }
-                            .forEach { $0.isSelected = false }
-                    }
-                } else {
-                    self?.featherColorButtons
-                        .forEach { $0.isSelected = false }
+                nonSelectedButtons.forEach {
+                    $0.isSelected = false
+                    $0.transform = CGAffineTransform(scaleX: 1, y: 1)
                 }
             }).disposed(by: bag)
-    }
     
-    @IBAction func resultButtonPressed(_ sender: UIButton) {
-        print("pressed")
+        resultButton.rx.tap
+            .withLatestFrom(output.matchingBirds)
+            .subscribe(onNext: { [weak self] (birds) in
+                guard let self = self, let title = self.resultButton.titleLabel?.text else { return }
+                self.coordinator?.resultButtonPressed(title, birds)
+            }).disposed(by: bag)
     }
 }
 
+// MARK: - CollectionView
+
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width * widthPercent,
                       height: collectionView.frame.height)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0,
-                            left: shapeCollectionView.frame.width * (1-widthPercent)/2,
-                            bottom: 0,
-                            right: shapeCollectionView.frame.width * (1-widthPercent)/2)
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: shapeCollectionView.frame.width * (1-widthPercent)/2,
+                            bottom: 0, right: shapeCollectionView.frame.width * (1-widthPercent)/2)
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -176,5 +220,18 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         default:
             break
         }
+    }
+}
+
+extension UICollectionView {
+    var centerPoint : CGPoint {
+        get {
+            return CGPoint(x: self.center.x + self.contentOffset.x,
+                           y: self.center.y + self.contentOffset.y)
+        }
+    }
+    
+    var centerCellIndexPath: IndexPath? {
+        return self.indexPathForItem(at: self.centerPoint)
     }
 }

@@ -10,6 +10,8 @@ import UIKit
 
 enum StoryboardName: String {
     case home = "Home"
+    case list = "List"
+    case details = "Details"
 }
 
 protocol Storyboarded {
