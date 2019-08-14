@@ -16,6 +16,7 @@ class ListViewController: UIViewController, Storyboarded {
     // MARK: - Outlets
     
     @IBOutlet weak var birdCollectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     // MARK: - Vars & Lets
     
@@ -35,21 +36,21 @@ class ListViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         birdCollectionView.delegate = self
+        searchBar.delegate = self
         setupBindings()
     }
     
     // MARK: - Methods
     
     fileprivate func setupBindings() {
-        let output = viewModel.transform(input: nil)
+        let input = ListViewModel.Input(searchText: searchBar.rx.text.orEmpty.asObservable())
+        let output = viewModel.transform(input: input)
         
         output.matchedBirdsData
             .bind(to: birdCollectionView.rx.items(dataSource: birdDataSource))
             .disposed(by: bag)
         
-        birdCollectionView.rx
-            .itemSelected
-            .asObservable()
+        birdCollectionView.rx.itemSelected
             .map { [weak self] (indexPath) -> BirdItem? in
                 guard let cell = self?.birdCollectionView.cellForItem(at: indexPath) as? PickerItemCell,
                     let item = cell.viewModel as? BirdItem else { return nil }
@@ -58,7 +59,7 @@ class ListViewController: UIViewController, Storyboarded {
             .subscribe(onNext: { [weak self] in
                 guard let self = self, let item = $0 else { return }
                 self.coordinator?.birdItemPressed(item: item)
-            })
+            }).disposed(by: bag)
     }
 }
 
@@ -77,5 +78,13 @@ extension ListViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
+    }
+}
+
+// MARK: - SearchBar
+
+extension ListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }

@@ -25,6 +25,9 @@ class HomeViewController: UIViewController, Storyboarded {
     @IBOutlet var featherColorButtons: [UIButton]!
     @IBOutlet weak var resultButton: UIButton!
     
+    @IBOutlet weak var navBarRightItem: UIBarButtonItem!
+    @IBOutlet weak var navBarLeftItem: UIBarButtonItem!
+    
     // MARK: - Vars & Lets
     
     let shapeGradientLayer = ItemGradientLayer()
@@ -69,6 +72,11 @@ class HomeViewController: UIViewController, Storyboarded {
     // MARK: - Methods
     
     fileprivate func setupController() {
+        navBarLeftItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white,
+                                               NSAttributedString.Key.font: UIFont(name: "OpenSans-SemiBold", size: 20)!], for: .disabled)
+        resultButton.layer.cornerRadius = 5
+        resultButton.layer.masksToBounds = false
+        
         for view in lineViews { view.layer.cornerRadius = view.frame.height / 2 }
         for button in featherColorButtons {
             guard let imageName = FeatherColor.fromTag(tag: button.tag)?.rawValue,
@@ -80,13 +88,13 @@ class HomeViewController: UIViewController, Storyboarded {
     }
     
     fileprivate func setupBindings() {
-        
         let shapeDragging = shapeCollectionView.rx.didEndDragging.filter { $0 == false }
-        let shapeScrolling = shapeCollectionView.rx.didEndScrollingAnimation
-        
+        let shapeScrolling = shapeCollectionView.rx.didEndScrollingAnimation.asObservable().startWith(())
+        let shapeDecelerating = shapeCollectionView.rx.didEndDecelerating.asObservable().startWith(())
+
         let shapeInput = Observable
-            .combineLatest(shapeDragging, shapeScrolling)
-            .map { (_,_) -> Void in return () }
+            .combineLatest(shapeDragging, shapeScrolling, shapeDecelerating)
+            .map { _ -> Void in return () }
             .map { [weak self] () -> BirdShape? in
                 guard let indexPath = self?.shapeCollectionView.centerCellIndexPath,
                     let cell = self?.shapeCollectionView.cellForItem(at: indexPath) as? PickerItemCell,
@@ -95,11 +103,12 @@ class HomeViewController: UIViewController, Storyboarded {
             }.startWith(.all)
         
         let locationDragging = locationCollectionView.rx.didEndDragging.filter { $0 == false }
-        let locationScrolling = locationCollectionView.rx.didEndScrollingAnimation
+        let locationScrolling = locationCollectionView.rx.didEndScrollingAnimation.asObservable().startWith(())
+        let locationDecelerating = locationCollectionView.rx.didEndDecelerating.asObservable().startWith(())
         
         let locationInput = Observable
-            .combineLatest(locationDragging, locationScrolling)
-            .map { (_,_) -> Void in return () }
+            .combineLatest(locationDragging, locationScrolling, locationDecelerating)
+            .map { _ -> Void in return () }
             .map { [weak self] () -> BirdLocation? in
                 guard let indexPath = self?.locationCollectionView.centerCellIndexPath,
                     let cell = self?.locationCollectionView.cellForItem(at: indexPath) as? PickerItemCell,
@@ -119,14 +128,12 @@ class HomeViewController: UIViewController, Storyboarded {
             .disposed(by: bag)
         
         output.isButtonEnabled
-            .bind(to: resultButton.rx.isEnabled)
+            .drive(resultButton.rx.isEnabled)
             .disposed(by: bag)
 
         output.buttonLabelText
-            .bind(to: resultButton.rx.title(for: .normal))
+            .drive(resultButton.rx.title(for: .normal))
             .disposed(by: bag)
-        
-        self.viewModel.selectedColors.accept([])
         
         for button in featherColorButtons {
             button.rx.tap
@@ -167,6 +174,14 @@ class HomeViewController: UIViewController, Storyboarded {
                 guard let self = self, let title = self.resultButton.titleLabel?.text else { return }
                 self.coordinator?.resultButtonPressed(title, birds)
             }).disposed(by: bag)
+        
+        navBarRightItem.rx.tap
+            .subscribe{ [weak self] _ in
+                guard let self = self else { return }
+                self.coordinator?.optionsButtonPressed()
+            }.disposed(by: bag)
+        
+        self.viewModel.selectedColors.accept([])
     }
 }
 
@@ -190,8 +205,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: shapeCollectionView.frame.width * (1-widthPercent)/2,
-                            bottom: 0, right: shapeCollectionView.frame.width * (1-widthPercent)/2)
+        return UIEdgeInsets(top: 0, left: shapeCollectionView.frame.width * (1 - widthPercent) / 2,
+                            bottom: 0, right: shapeCollectionView.frame.width * (1 - widthPercent) / 2)
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -204,7 +219,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         }
     }
     
-    func scrollToNearestVisibleCollectionViewCell(scrollView: UIScrollView) {
+    fileprivate func scrollToNearestVisibleCollectionViewCell(scrollView: UIScrollView) {
         let middlePoint = Int(scrollView.contentOffset.x + UIScreen.main.bounds.width / 2)
         switch scrollView {
         case shapeCollectionView:
@@ -226,12 +241,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 extension UICollectionView {
     var centerPoint : CGPoint {
         get {
-            return CGPoint(x: self.center.x + self.contentOffset.x,
-                           y: self.center.y + self.contentOffset.y)
+            return CGPoint(x: center.x + contentOffset.x,
+                           y: center.y + contentOffset.y)
         }
     }
     
     var centerCellIndexPath: IndexPath? {
-        return self.indexPathForItem(at: self.centerPoint)
+        return indexPathForItem(at: centerPoint)
     }
 }

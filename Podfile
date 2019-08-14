@@ -11,4 +11,5 @@ target 'ptice-na-dlanu' do
   pod 'RxDataSources', '~> 3.0'
   pod 'RealmSwift'
   pod 'SwiftCSV', '~> 0.5'
+  pod 'FontAwesome.swift'
 end

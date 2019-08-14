@@ -16,16 +16,30 @@ class ListViewModel {
     var matchedBirds = BehaviorRelay<[BirdItem]>(value: [])
     
     struct Input {
+        let searchText: Observable<String>
     }
     
     struct Output {
         let matchedBirdsData: Observable<[SectionModel<String, BirdItem>]>
     }
     
-    func transform(input: Input?) -> Output {
-        let birdDataSource = matchedBirds.asObservable()
+    func transform(input: Input) -> Output {
+        let birdDataSource = Observable.combineLatest(matchedBirds, input.searchText)
+            .map({ (matchedBirds, searchText) -> [BirdItem] in
+                matchedBirds.filter { self.birdSearchFilter(bird: $0.bird, text: searchText) }
+            })
             .map { [SectionModel<String, BirdItem>.init(model: "", items: $0)] }
 
         return Output(matchedBirdsData: birdDataSource)
+    }
+    
+    func birdSearchFilter(bird: Bird, text: String) -> Bool {
+        guard !text.isEmpty else { return true }
+        
+        let foundInSrpskiNazivVrste = bird.srpskiNazivVrste.range(of: text, options: .caseInsensitive) != nil
+        let foundInPorodica = bird.srpskiNazivVrste.range(of: text, options: .caseInsensitive) != nil
+        let foundInNaucniNazivVrste = bird.naucniNazivVrste.range(of: text, options: .caseInsensitive) != nil
+
+        return foundInSrpskiNazivVrste || foundInPorodica || foundInNaucniNazivVrste
     }
 }

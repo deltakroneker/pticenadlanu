@@ -13,17 +13,27 @@ import RxDataSources
 
 class DetailsViewModel {
     
+    var birdItem = BehaviorRelay<BirdItem?>(value: nil)
+    
     struct Input {
     }
     
     struct Output {
-//        let matchedBirdsData: Observable<[SectionModel<String, BirdItem>]>
+        let imagesData: Observable<[SectionModel<String, String>]>
+        let isPageControlHidden: Observable<Bool>
     }
     
-//    func transform(input: Input?) -> Output {
-//        let birdDataSource = matchedBirds.asObservable()
-//            .map { [SectionModel<String, BirdItem>.init(model: "", items: $0)] }
-//        
-//        return Output(matchedBirdsData: birdDataSource)
-//    }
+    func transform(input: Input?) -> Output {
+        let images = birdItem.asObservable()
+            .map { ($0?.gender == Gender.female ? $0?.femaleImages : $0?.images) ?? [] }
+            
+        let imageDataSource = images
+            .map { [SectionModel<String, String>.init(model: "", items: $0)] }
+        
+        let isPageControlHidden = images
+            .map { $0.count == 1 }
+        
+        return Output(imagesData: imageDataSource,
+                      isPageControlHidden: isPageControlHidden)
+    }
 }

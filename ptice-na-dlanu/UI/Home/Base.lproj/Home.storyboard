@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Pronađimo pticu-->
+        <!--Home View Controller-->
         <scene sceneID="obh-Bd-bLG">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="0Rz-SS-S6m" customClass="HomeViewController" customModule="ptice_na_dlanu" customModuleProvider="target" sceneMemberID="viewController">
@@ -309,10 +309,10 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXu-pL-oR6">
-                                <rect key="frame" x="103.66666666666669" y="794" width="207" height="45"/>
+                                <rect key="frame" x="82.666666666666671" y="789" width="248.66666666666663" height="50"/>
                                 <color key="backgroundColor" name="colorAccent"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="SZw-KX-nPJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="SZw-KX-nPJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans SemiBold" pointSize="17"/>
                                 <state key="normal" title="0 REZULTATA">
@@ -351,7 +351,7 @@
                             <constraint firstItem="HmY-D1-TUH" firstAttribute="trailing" secondItem="sG4-rL-eph" secondAttribute="trailing" id="gsj-Oz-MuV"/>
                             <constraint firstItem="lZw-k2-ggb" firstAttribute="width" secondItem="qiC-ZN-Dkg" secondAttribute="width" id="gx7-r2-v8z"/>
                             <constraint firstItem="lZw-k2-ggb" firstAttribute="height" secondItem="qiC-ZN-Dkg" secondAttribute="height" id="iHs-pJ-3bZ"/>
-                            <constraint firstItem="iXu-pL-oR6" firstAttribute="width" secondItem="2eE-Hj-hMJ" secondAttribute="width" multiplier="0.5" id="iZ2-l7-Mk9"/>
+                            <constraint firstItem="iXu-pL-oR6" firstAttribute="width" secondItem="2eE-Hj-hMJ" secondAttribute="width" multiplier="0.6" id="iZ2-l7-Mk9"/>
                             <constraint firstItem="z5z-XL-77k" firstAttribute="centerY" secondItem="qiC-ZN-Dkg" secondAttribute="centerY" id="nMR-gb-5X6"/>
                             <constraint firstItem="0mA-te-Dl2" firstAttribute="width" secondItem="z5z-XL-77k" secondAttribute="width" multiplier="0.4" id="o3c-iB-ibr"/>
                             <constraint firstItem="CnJ-gq-zzL" firstAttribute="centerX" secondItem="lZw-k2-ggb" secondAttribute="centerX" id="o4G-ux-NEM"/>
@@ -365,12 +365,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1vq-wz-cfk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Pronađimo pticu" id="uJ5-2O-t9P">
+                    <navigationItem key="navigationItem" id="uJ5-2O-t9P">
                         <barButtonItem key="backBarButtonItem" title=" " id="fEk-3p-J2N"/>
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Pronađimo pticu" style="done" id="xxB-9p-AeP">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="three-dots" id="cbz-Rb-UNE">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="locationCollectionView" destination="zmt-NV-nyE" id="SkU-MG-neD"/>
                         <outlet property="locationContainerView" destination="lZw-k2-ggb" id="hIj-Dj-KJY"/>
+                        <outlet property="navBarLeftItem" destination="xxB-9p-AeP" id="AeJ-bN-PVt"/>
+                        <outlet property="navBarRightItem" destination="cbz-Rb-UNE" id="ISF-eW-OT2"/>
                         <outlet property="resultButton" destination="iXu-pL-oR6" id="cb3-8p-Jwa"/>
                         <outlet property="shapeCollectionView" destination="qfE-kg-UM9" id="OVS-Au-2PO"/>
                         <outlet property="shapeContainerView" destination="qiC-ZN-Dkg" id="ay5-rO-ELF"/>
@@ -402,6 +410,7 @@
         <image name="greyCircle" width="80" height="80"/>
         <image name="orangeCircle" width="80" height="80"/>
         <image name="redCircle" width="80" height="80"/>
+        <image name="three-dots" width="25" height="25"/>
         <image name="whiteCircle" width="80" height="80"/>
         <image name="yellowCircle" width="80" height="80"/>
         <namedColor name="colorAccent">

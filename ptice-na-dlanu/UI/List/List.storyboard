@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wfH-sr-JD3">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wfH-sr-JD3">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" name="frontPageBackground"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UK0-iX-16v">
                                     <size key="itemSize" width="184" height="184"/>
@@ -78,12 +78,24 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="traži po nazivu vrste ili porodice" translatesAutoresizingMaskIntoConstraints="NO" id="TQt-eT-2oL">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <color key="barTintColor" name="colorPrimaryLight"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wfH-sr-JD3" firstAttribute="top" secondItem="RmJ-0u-tvX" secondAttribute="top" id="UgB-VX-pte"/>
+                            <constraint firstItem="TQt-eT-2oL" firstAttribute="top" secondItem="RmJ-0u-tvX" secondAttribute="top" id="4IP-dJ-BaN"/>
+                            <constraint firstItem="wfH-sr-JD3" firstAttribute="top" secondItem="TQt-eT-2oL" secondAttribute="bottom" id="Phk-wH-cSo"/>
+                            <constraint firstItem="RmJ-0u-tvX" firstAttribute="trailing" secondItem="TQt-eT-2oL" secondAttribute="trailing" id="i5Z-B0-DEh"/>
                             <constraint firstItem="RmJ-0u-tvX" firstAttribute="bottom" secondItem="wfH-sr-JD3" secondAttribute="bottom" id="imn-KK-BOo"/>
                             <constraint firstItem="RmJ-0u-tvX" firstAttribute="trailing" secondItem="wfH-sr-JD3" secondAttribute="trailing" id="kWZ-lb-k5Q"/>
+                            <constraint firstItem="TQt-eT-2oL" firstAttribute="leading" secondItem="RmJ-0u-tvX" secondAttribute="leading" id="wNB-UL-EmP"/>
                             <constraint firstItem="wfH-sr-JD3" firstAttribute="leading" secondItem="RmJ-0u-tvX" secondAttribute="leading" id="zPG-Or-T7J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RmJ-0u-tvX"/>
@@ -94,6 +106,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="birdCollectionView" destination="wfH-sr-JD3" id="7zM-c1-VtP"/>
+                        <outlet property="searchBar" destination="TQt-eT-2oL" id="Ew5-BA-pb4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BY8-sD-K6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,6 +115,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="colorPrimaryLight">
+            <color red="0.85000002384185791" green="0.89999997615814209" blue="0.60000002384185791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="frontPageBackground">
             <color red="0.93000000715255737" green="0.93000000715255737" blue="0.93000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

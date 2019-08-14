@@ -28,7 +28,6 @@ class AppCoordinator: Coordinator {
         let vc = HomeViewController.instantiate(from: .home)
         vc.coordinator = self
         vc.viewModel = HomeViewModel()
-        vc.title = "Pronađimo pticu"
         navigationController.pushViewController(vc, animated: false)
     }
 }
@@ -48,7 +47,29 @@ extension AppCoordinator {
         let vc = DetailsViewController.instantiate(from: .details)
         vc.coordinator = self
         vc.viewModel = DetailsViewModel()
+        vc.viewModel.birdItem.accept(item)
         vc.title = item.bird.srpskiNazivVrste
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func optionsButtonPressed() {
+        let vc = OptionsViewController.instantiate(from: .options)
+        vc.coordinator = self
+        vc.title = "Opcije"
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func applicationInfoCellPressed() {
+        let vc = AboutAppViewController.instantiate(from: .options)
+        vc.coordinator = self
+        vc.title = "O aplikaciji \"Ptice na dlanu\""
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func aboutUsCellPressed() {
+        let vc = AboutUsViewController.instantiate(from: .options)
+        vc.coordinator = self
+        vc.title = "O nama - DZPPS"
         navigationController.pushViewController(vc, animated: true)
     }
 }

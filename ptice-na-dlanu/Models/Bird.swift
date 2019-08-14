@@ -78,6 +78,9 @@ struct BirdItem: Item {
             $0.trimmingCharacters(in: .whitespacesAndNewlines)
         }
     }
+    var femaleImages: [String] {
+        return images.reversed()
+    }
     var image: String {
         guard let first = images.first, let last = images.last else { return "f_laste" }
         return (gender == .female) ? last : first

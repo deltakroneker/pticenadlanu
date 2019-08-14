@@ -27,8 +27,8 @@ class HomeViewModel {
         
         let matchingBirds: Observable<[BirdItem]>
 
-        let isButtonEnabled: Observable<Bool>
-        let buttonLabelText: Observable<String>
+        let isButtonEnabled: Driver<Bool>
+        let buttonLabelText: Driver<String>
     }
     
     func transform(input: Input) -> Output {
@@ -73,10 +73,9 @@ class HomeViewModel {
         return Output(newShapeData: shapeDataSource,
                       newLocationData: locationDataSource,
                       matchingBirds: matchingBirds,
-                      isButtonEnabled: isButtonEnabled,
-                      buttonLabelText: buttonText)
+                      isButtonEnabled: isButtonEnabled.asDriver(onErrorJustReturn: false),
+                      buttonLabelText: buttonText.asDriver(onErrorJustReturn: "0 REZULTATA"))
     }
-
 }
 
 extension HomeViewModel {
@@ -89,7 +88,6 @@ extension HomeViewModel {
                 
                 var filteredBirds = [Bird]()
                 for bird in birds {
-                    
                     let colorSatisfied = Set(bird.featherColorArray).intersection(colors).count > 0 || colors.isEmpty
                     let shapeSatisfied = bird.shapeArray.contains(shape) || shape == .all
                     let locationSatisfied = bird.locationArray.contains(location) || location == .all
@@ -97,7 +95,6 @@ extension HomeViewModel {
                     if colorSatisfied && shapeSatisfied && locationSatisfied {
                         filteredBirds.append(bird)
                     }
-                    
                 }
                 return filteredBirds
             }

@@ -1,5 +1,6 @@
 PODS:
   - Differentiator (3.1.0)
+  - FontAwesome.swift (1.8.1)
   - Realm (3.14.1):
     - Realm/Headers (= 3.14.1)
   - Realm/Headers (3.14.1)
@@ -15,6 +16,7 @@ PODS:
   - SwiftCSV (0.5.0)
 
 DEPENDENCIES:
+  - FontAwesome.swift
   - RealmSwift
   - RxCocoa (~> 4.0)
   - RxDataSources (~> 3.0)
@@ -24,6 +26,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Differentiator
+    - FontAwesome.swift
     - Realm
     - RealmSwift
     - RxCocoa
@@ -33,6 +36,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  FontAwesome.swift: 6f55c8ed22a30ab6a8ca94033473161f678dcd4b
   Realm: e12c9c2387d05c5bba3a9c394838f5870e85763b
   RealmSwift: a82eab9b04c3e1616082c7e17aa300740847769c
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
@@ -40,6 +44,6 @@ SPEC CHECKSUMS:
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SwiftCSV: 9e4b60886a4ef4cabc8ffa04076c23113b1d046d
 
-PODFILE CHECKSUM: 904fda8ff0fd8abbfaa3529d677bf86ac0805294
+PODFILE CHECKSUM: dadb52d27885c1ae0f9016ac68671d776d0c221b
 
 COCOAPODS: 1.5.3
