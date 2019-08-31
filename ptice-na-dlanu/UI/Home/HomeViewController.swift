@@ -41,14 +41,14 @@ class HomeViewController: UIViewController, Storyboarded {
     
     let shapeDataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String, ShapeItem>>(configureCell: {
         (dataSource, cv, indexPath, shapeVM) -> UICollectionViewCell in
-        let cell = cv.dequeueReusableCell(withReuseIdentifier: "PickerItemCell", for: indexPath) as! PickerItemCell
+        let cell = cv.dequeueReusableCell(withReuseIdentifier: "PickerItemCell", for: indexPath) as! ImageWithTitleCell
         cell.viewModel = shapeVM
         return cell
     })
     
     let locationDataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String, LocationItem>>(configureCell: {
         (dataSource, cv, indexPath, locationVM) -> UICollectionViewCell in
-        let cell = cv.dequeueReusableCell(withReuseIdentifier: "PickerItemCell", for: indexPath) as! PickerItemCell
+        let cell = cv.dequeueReusableCell(withReuseIdentifier: "PickerItemCell", for: indexPath) as! ImageWithTitleCell
         cell.viewModel = locationVM
         return cell
     })
@@ -97,7 +97,7 @@ class HomeViewController: UIViewController, Storyboarded {
             .map { _ -> Void in return () }
             .map { [weak self] () -> BirdShape? in
                 guard let indexPath = self?.shapeCollectionView.centerCellIndexPath,
-                    let cell = self?.shapeCollectionView.cellForItem(at: indexPath) as? PickerItemCell,
+                    let cell = self?.shapeCollectionView.cellForItem(at: indexPath) as? ImageWithTitleCell,
                     let item = cell.viewModel as? ShapeItem else { return nil }
                 return item.shape
             }.startWith(.all)
@@ -111,7 +111,7 @@ class HomeViewController: UIViewController, Storyboarded {
             .map { _ -> Void in return () }
             .map { [weak self] () -> BirdLocation? in
                 guard let indexPath = self?.locationCollectionView.centerCellIndexPath,
-                    let cell = self?.locationCollectionView.cellForItem(at: indexPath) as? PickerItemCell,
+                    let cell = self?.locationCollectionView.cellForItem(at: indexPath) as? ImageWithTitleCell,
                     let item = cell.viewModel as? LocationItem else { return nil }
                 return item.location
             }.startWith(.all)

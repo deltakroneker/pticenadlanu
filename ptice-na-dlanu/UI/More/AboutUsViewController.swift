@@ -24,7 +24,8 @@ class AboutUsViewController: UIViewController, Storyboarded {
     @IBOutlet weak var instagramButton: UIButton!
     
     @IBOutlet weak var posterLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var phone1Label: UILabel!
+    @IBOutlet weak var phone2Label: UILabel!
     @IBOutlet weak var websiteLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
@@ -46,8 +47,10 @@ class AboutUsViewController: UIViewController, Storyboarded {
     fileprivate func setupController() {
         posterLabel.attributedText = NSAttributedString(string: posterLabel.text ?? "",
                                                         attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
-        phoneLabel.attributedText = NSAttributedString(string: phoneLabel.text ?? "",
+        phone1Label.attributedText = NSAttributedString(string: phone1Label.text ?? "",
                                                        attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        phone2Label.attributedText = NSAttributedString(string: phone2Label.text ?? "",
+                                                        attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         websiteLabel.attributedText = NSAttributedString(string: websiteLabel.text ?? "",
                                                          attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         emailLabel.attributedText = NSAttributedString(string: emailLabel.text ?? "",
@@ -65,12 +68,14 @@ class AboutUsViewController: UIViewController, Storyboarded {
     
     fileprivate func setupBindings() {
         let posterTap = UITapGestureRecognizer()
-        let phoneTap = UITapGestureRecognizer()
+        let phone1Tap = UITapGestureRecognizer()
+        let phone2Tap = UITapGestureRecognizer()
         let websiteTap = UITapGestureRecognizer()
         let emailTap = UITapGestureRecognizer()
         
         posterLabel.addGestureRecognizer(posterTap)
-        phoneLabel.addGestureRecognizer(phoneTap)
+        phone1Label.addGestureRecognizer(phone1Tap)
+        phone2Label.addGestureRecognizer(phone2Tap)
         websiteLabel.addGestureRecognizer(websiteTap)
         emailLabel.addGestureRecognizer(emailTap)
 
@@ -80,9 +85,15 @@ class AboutUsViewController: UIViewController, Storyboarded {
                 UIApplication.shared.open(url)
             }).disposed(by: bag)
         
-        phoneTap.rx.event
+        phone1Tap.rx.event
             .subscribe(onNext: { _ in
                 guard let url = URL(string: "tel://+381216318343") else { return }
+                UIApplication.shared.open(url)
+            }).disposed(by: bag)
+        
+        phone2Tap.rx.event
+            .subscribe(onNext: { _ in
+                guard let url = URL(string: "tel://+381113343902") else { return }
                 UIApplication.shared.open(url)
             }).disposed(by: bag)
         

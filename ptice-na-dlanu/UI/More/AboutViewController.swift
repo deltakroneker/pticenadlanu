@@ -1,5 +1,5 @@
 //
-//  OptionsViewController.swift
+//  AboutViewController.swift
 //  ptice-na-dlanu
 //
 //  Created by Nikola Milic on 7/25/19.
@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-class OptionsViewController: UIViewController, Storyboarded {
+class AboutViewController: UIViewController, Storyboarded {
 
     // MARK: - Outlets
 
@@ -56,7 +56,7 @@ class OptionsViewController: UIViewController, Storyboarded {
 
 // MARK: - TableView
 
-extension OptionsViewController: UITableViewDelegate {
+extension AboutViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return CGFloat.leastNonzeroMagnitude
     }

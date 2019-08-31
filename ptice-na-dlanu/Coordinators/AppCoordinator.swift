@@ -53,21 +53,21 @@ extension AppCoordinator {
     }
     
     func optionsButtonPressed() {
-        let vc = OptionsViewController.instantiate(from: .options)
+        let vc = AboutViewController.instantiate(from: .about)
         vc.coordinator = self
-        vc.title = "Opcije"
+        vc.title = "Saznajte više"
         navigationController.pushViewController(vc, animated: true)
     }
     
     func applicationInfoCellPressed() {
-        let vc = AboutAppViewController.instantiate(from: .options)
+        let vc = AboutAppViewController.instantiate(from: .about)
         vc.coordinator = self
         vc.title = "O aplikaciji \"Ptice na dlanu\""
         navigationController.pushViewController(vc, animated: true)
     }
     
     func aboutUsCellPressed() {
-        let vc = AboutUsViewController.instantiate(from: .options)
+        let vc = AboutUsViewController.instantiate(from: .about)
         vc.coordinator = self
         vc.title = "O nama - DZPPS"
         navigationController.pushViewController(vc, animated: true)

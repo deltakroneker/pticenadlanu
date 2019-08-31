@@ -19,10 +19,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Options View Controller-->
+        <!--About View Controller-->
         <scene sceneID="iGY-Fb-EJx">
             <objects>
-                <viewController storyboardIdentifier="OptionsViewController" id="NDe-V1-cyR" customClass="OptionsViewController" customModule="ptice_na_dlanu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutViewController" id="NDe-V1-cyR" customClass="AboutViewController" customModule="ptice_na_dlanu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ON-ql-UaQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFU-LY-ZBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="417" y="-182"/>
+            <point key="canvasLocation" x="416" y="-218"/>
         </scene>
         <!--About App View Controller-->
         <scene sceneID="RIv-XI-Hbm">
@@ -201,7 +201,7 @@
                                                 <string key="text">• Stručni saradnici i urednici informacija o pticama: Draženko Rajković i Uroš Pantović. 
 • Algoritam za prepoznavanje ptica: Saša Rajkov 
 • Grafički dizajn: Kalman Moldvai 
-• Tehnički razvoj aplikacije: Jelena Krmar.</string>
+• Tehnički razvoj aplikacije: Jelena Krmar i Nikola Milić.</string>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -348,11 +348,11 @@
             <objects>
                 <viewController storyboardIdentifier="AboutUsViewController" id="JHu-fV-HAm" customClass="AboutUsViewController" customModule="ptice_na_dlanu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wS1-SB-Xlk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0l6-j1-L09">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="922"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68w-J9-v4T">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="726.5"/>
@@ -433,10 +433,10 @@
                                                         <color key="textColor" name="colorAccent"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="011 334 3902" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iB-nZ-NrB">
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="011 334 3902" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iB-nZ-NrB">
                                                         <rect key="frame" x="0.0" y="22.5" width="94" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="colorAccent"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -569,14 +569,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jud-RL-enL"/>
                     </view>
+                    <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="emailImageView" destination="RCj-cT-5x9" id="hIT-BF-r6Y"/>
                         <outlet property="emailLabel" destination="2KW-sw-zov" id="CdA-yM-liU"/>
                         <outlet property="facebookButton" destination="u1i-kc-uYR" id="KQu-1M-1Co"/>
                         <outlet property="instagramButton" destination="dnU-UE-AhD" id="ARv-oz-dLU"/>
                         <outlet property="markerImageView" destination="UWw-ZT-B7L" id="lMX-yz-SlJ"/>
+                        <outlet property="phone1Label" destination="7d0-01-7LQ" id="rDB-uH-C2W"/>
+                        <outlet property="phone2Label" destination="0iB-nZ-NrB" id="L2s-Ae-JOl"/>
                         <outlet property="phoneImageView" destination="Gvy-qS-tdk" id="9nF-Bv-EF0"/>
-                        <outlet property="phoneLabel" destination="7d0-01-7LQ" id="rDB-uH-C2W"/>
                         <outlet property="posterLabel" destination="6Pi-zZ-4aN" id="LLb-04-0cz"/>
                         <outlet property="twitterButton" destination="cM6-79-Q8x" id="qwV-bV-Vcg"/>
                         <outlet property="websiteLabel" destination="zMV-rK-y4F" id="Pz7-B2-D9C"/>
@@ -585,7 +587,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3p-oP-7k1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1947.826086956522" y="-216.29464285714286"/>
+            <point key="canvasLocation" x="1945" y="-183"/>
         </scene>
     </scenes>
     <resources>

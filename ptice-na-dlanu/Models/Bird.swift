@@ -71,6 +71,7 @@ enum Gender {
 struct BirdItem: Item {
     var bird: Bird
     var gender: Gender
+    var genderString: String { return gender == .male ? " (m)" : " (ž)" }
     
     var hasFemaleVersion: Bool { return !bird.ilustracijeZenke.isEmpty }
     var images: [String] {

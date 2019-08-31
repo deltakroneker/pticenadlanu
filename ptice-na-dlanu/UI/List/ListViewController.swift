@@ -26,7 +26,7 @@ class ListViewController: UIViewController, Storyboarded {
     
     let birdDataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String, BirdItem>>(configureCell: {
         (dataSource, cv, indexPath, birdVM) -> UICollectionViewCell in
-        let cell = cv.dequeueReusableCell(withReuseIdentifier: "PickerItemCell", for: indexPath) as! PickerItemCell
+        let cell = cv.dequeueReusableCell(withReuseIdentifier: "PickerItemCell", for: indexPath) as! ImageWithTitleCell
         cell.viewModel = birdVM
         return cell
     })
@@ -52,7 +52,7 @@ class ListViewController: UIViewController, Storyboarded {
         
         birdCollectionView.rx.itemSelected
             .map { [weak self] (indexPath) -> BirdItem? in
-                guard let cell = self?.birdCollectionView.cellForItem(at: indexPath) as? PickerItemCell,
+                guard let cell = self?.birdCollectionView.cellForItem(at: indexPath) as? ImageWithTitleCell,
                     let item = cell.viewModel as? BirdItem else { return nil }
                 return item
             }

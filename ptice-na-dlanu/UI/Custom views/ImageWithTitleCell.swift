@@ -1,5 +1,5 @@
 //
-//  PickerItemCell.swift
+//  ImageWithTitleCell.swift
 //  ptice-na-dlanu
 //
 //  Created by Nikola Milic on 4/10/19.
@@ -8,14 +8,19 @@
 
 import UIKit
 
-class PickerItemCell: UICollectionViewCell {
+class ImageWithTitleCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
     var viewModel: Item! {
         didSet {
-            titleLabel.text = viewModel.text
+            if let vm = viewModel as? BirdItem {
+                titleLabel.text = vm.hasFemaleVersion ? vm.text + vm.genderString : vm.text
+            } else {
+                titleLabel.text = viewModel.text
+            }
+            
             if let image = UIImage(named: viewModel.image) {
                 imageView.image = image
             }

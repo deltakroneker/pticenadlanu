@@ -27,11 +27,11 @@
             <objects>
                 <viewController storyboardIdentifier="DetailsViewController" id="2qC-TD-w2b" customClass="DetailsViewController" customModule="ptice_na_dlanu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="faI-WZ-4fT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdG-nR-BcA">
-                                <rect key="frame" x="0.0" y="20" width="414" height="1180"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="980"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHr-z0-bcC">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="961.66666666666663"/>
@@ -215,7 +215,7 @@
                                                     <constraint firstAttribute="width" secondItem="JQh-Np-dvr" secondAttribute="height" multiplier="1:1" id="z4l-xv-B0k"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_warning" translatesAutoresizingMaskIntoConstraints="NO" id="HZ8-3q-Qlh">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_warning" translatesAutoresizingMaskIntoConstraints="NO" id="HZ8-3q-Qlh">
                                                 <rect key="frame" x="30" y="891.66666666666663" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="b4b-X6-LZ5"/>
@@ -233,10 +233,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spada u ugroženne vrste u Srbiji." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouE-5D-gay">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spada u ugrožene vrste u Srbiji." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouE-5D-gay">
                                                 <rect key="frame" x="105" y="891.66666666666663" width="294" height="23.333333333333371"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -300,7 +300,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bkd-JK-jQd"/>
                     </view>
-                    <size key="freeformSize" width="414" height="1200"/>
+                    <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="birdLengthLabel" destination="cct-Wc-BPL" id="uBR-3H-60o"/>
                         <outlet property="descriptionLabel" destination="Zzx-4C-5ni" id="cSZ-bK-p4h"/>

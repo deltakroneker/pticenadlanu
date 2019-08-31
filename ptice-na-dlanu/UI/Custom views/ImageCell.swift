@@ -9,7 +9,9 @@
 import UIKit
 
 class ImageCell: UICollectionViewCell {
+    
     @IBOutlet weak var imageView: UIImageView!
+    
     var imageName: String? {
         didSet {
             if let imageName = imageName,
