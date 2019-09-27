@@ -44,24 +44,10 @@ class HomeViewModel {
 
         let matchingBirds = Observable
             .combineLatest(selectedColors.asObservable(), input.shape, input.location)
-            .map { [weak self] (colors, shape, location) -> [Bird] in
+            .map { [weak self] (colors, shape, location) -> [BirdItem] in
                 guard let self = self, let shape = shape, let location = location else { return [] }
                 return self.getBirds(with: colors, shape, location)
-            }
-            .map { $0.map { BirdItem(bird: $0, gender: .noGender) } }
-            .map { birdItems -> [BirdItem] in
-                var newBirdItems = birdItems
-                for (index,item) in birdItems.enumerated() {
-                    if item.hasFemaleVersion {
-                        var femaleItem = item
-                        femaleItem.gender = .female
-                        newBirdItems[index].gender = .male
-                        newBirdItems.insert(femaleItem, at: index + 1)
-                    }
-                }
-                return newBirdItems
-            }
-            .share()
+            }.share()
         
         let isButtonEnabled = matchingBirds
             .map { $0.count == 0 ? false : true }
@@ -80,20 +66,37 @@ class HomeViewModel {
 
 extension HomeViewModel {
     
-    func getBirds(with colors: [FeatherColor], _ shape: BirdShape, _ location: BirdLocation) -> [Bird] {
+    func getBirds(with colors: [FeatherColor], _ shape: BirdShape, _ location: BirdLocation) -> [BirdItem] {
         do {
             if let path = Bundle.main.path(forResource: "scheme", ofType: "json") {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let birds = try JSONDecoder().decode([Bird].self, from: data)
                 
-                var filteredBirds = [Bird]()
+                var filteredBirds = [BirdItem]()
                 for bird in birds {
+                    
                     let colorSatisfied = Set(bird.featherColorArray).intersection(colors).count > 0 || colors.isEmpty
+                    let femaleColorSatisfied = Set(bird.femaleFeatherColorArray).intersection(colors).count > 0 || colors.isEmpty
                     let shapeSatisfied = bird.shapeArray.contains(shape) || shape == .all
                     let locationSatisfied = bird.locationArray.contains(location) || location == .all
                     
-                    if colorSatisfied && shapeSatisfied && locationSatisfied {
-                        filteredBirds.append(bird)
+                    if shapeSatisfied && locationSatisfied {
+                        let birdItem = BirdItem(bird: bird, gender: .noGender)
+                        
+                        if birdItem.hasFemaleVersion {
+                            if colorSatisfied {
+                                var maleBirdItem = birdItem
+                                maleBirdItem.gender = .male
+                                filteredBirds.append(maleBirdItem)
+                            }
+                            if (birdItem.hasDifferentFemaleColors ? femaleColorSatisfied : colorSatisfied) {
+                                var femaleBirdItem = birdItem
+                                femaleBirdItem.gender = .female
+                                filteredBirds.append(femaleBirdItem)
+                            }
+                        } else if colorSatisfied {
+                            filteredBirds.append(birdItem)
+                        }
                     }
                 }
                 return filteredBirds

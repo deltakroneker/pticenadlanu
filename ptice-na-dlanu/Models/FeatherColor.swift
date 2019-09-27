@@ -43,7 +43,7 @@ enum FeatherColor: String, CaseIterable {
         case "bez":           return .beige
         case "siva":          return .grey
         case "bela":          return .white
-        case "zuto":          return .yellow
+        case "zuta":          return .yellow
         case "narandzasta":   return .orange
         case "crvena":        return .red
         case "plava":         return .blue

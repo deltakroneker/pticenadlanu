@@ -9,7 +9,6 @@ target 'ptice-na-dlanu' do
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
   pod 'RxDataSources', '~> 3.0'
-  pod 'RealmSwift'
   pod 'SwiftCSV', '~> 0.5'
   pod 'FontAwesome.swift'
 end

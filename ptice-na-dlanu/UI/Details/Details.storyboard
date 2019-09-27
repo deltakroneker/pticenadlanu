@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,10 +29,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdG-nR-BcA">
-                                <rect key="frame" x="0.0" y="20" width="414" height="980"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHr-z0-bcC">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="961.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="949.66666666666663"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LH1-Hc-XZz">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
@@ -126,22 +124,22 @@
                                                     <constraint firstAttribute="trailing" secondItem="6zu-w9-Xgh" secondAttribute="trailing" constant="15" id="zRO-KY-6Hw"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="yNE-bE-q9s">
-                                                <rect key="frame" x="30" y="399.66666666666669" width="354" height="78.333333333333314"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yNE-bE-q9s">
+                                                <rect key="frame" x="45" y="399.66666666666669" width="324" height="66.333333333333314"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="T6d-NT-21a">
-                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="78.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="66.333333333333329"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_length" translatesAutoresizingMaskIntoConstraints="NO" id="MtR-9k-zmc">
-                                                                <rect key="frame" x="24" y="0.0" width="50" height="50"/>
+                                                                <rect key="frame" x="28" y="0.0" width="42" height="42"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="50" id="FAE-Ql-vFk"/>
+                                                                    <constraint firstAttribute="width" constant="42" id="FAE-Ql-vFk"/>
                                                                     <constraint firstAttribute="width" secondItem="MtR-9k-zmc" secondAttribute="height" multiplier="1:1" id="zXK-6x-wv7"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 cm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cct-Wc-BPL">
-                                                                <rect key="frame" x="0.0" y="55.000000000000007" width="98" height="23.333333333333336"/>
-                                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans SemiBold" pointSize="17"/>
+                                                                <rect key="frame" x="0.0" y="47" width="98" height="19.333333333333329"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans SemiBold" pointSize="14"/>
                                                                 <color key="textColor" name="colorAccent"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -149,20 +147,20 @@
                                                         <viewLayoutGuide key="safeArea" id="hF5-rU-sJx"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eEr-eF-4AK">
-                                                        <rect key="frame" x="128" y="0.0" width="98" height="78.333333333333329"/>
+                                                        <rect key="frame" x="113" y="0.0" width="98" height="66.333333333333329"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_wingspan" translatesAutoresizingMaskIntoConstraints="NO" id="TEg-Kl-vZo">
-                                                                <rect key="frame" x="24" y="0.0" width="50" height="50"/>
+                                                                <rect key="frame" x="28" y="0.0" width="42" height="42"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="TEg-Kl-vZo" secondAttribute="height" multiplier="1:1" id="uSp-9a-8XO"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100-100 cm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yST-iB-QhF">
-                                                                <rect key="frame" x="0.0" y="55.000000000000007" width="98" height="23.333333333333336"/>
+                                                                <rect key="frame" x="0.0" y="47" width="98" height="19.333333333333329"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="98" id="JNb-AK-ICj"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans SemiBold" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans SemiBold" pointSize="14"/>
                                                                 <color key="textColor" name="colorAccent"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -170,17 +168,17 @@
                                                         <viewLayoutGuide key="safeArea" id="Yf8-8l-53Z"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0CW-kf-hUH">
-                                                        <rect key="frame" x="256" y="0.0" width="98" height="78.333333333333329"/>
+                                                        <rect key="frame" x="226" y="0.0" width="98" height="66.333333333333329"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_weight" translatesAutoresizingMaskIntoConstraints="NO" id="sqB-c1-hX7">
-                                                                <rect key="frame" x="24" y="0.0" width="50" height="50"/>
+                                                                <rect key="frame" x="28" y="0.0" width="42" height="42"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="sqB-c1-hX7" secondAttribute="height" multiplier="1:1" id="J1E-0q-M3U"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100-100 g" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVj-AX-45m">
-                                                                <rect key="frame" x="0.0" y="55.000000000000007" width="98" height="23.333333333333336"/>
-                                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans SemiBold" pointSize="17"/>
+                                                                <rect key="frame" x="0.0" y="47" width="98" height="19.333333333333329"/>
+                                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans SemiBold" pointSize="14"/>
                                                                 <color key="textColor" name="colorAccent"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -195,46 +193,46 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzx-4C-5ni">
-                                                <rect key="frame" x="15" y="508.00000000000006" width="384" height="208.66666666666669"/>
+                                                <rect key="frame" x="15" y="496.00000000000006" width="384" height="208.66666666666669"/>
                                                 <string key="text">Nežna senica mozaičnih i šumskih predela Srbije. Zdepastim telom i veoma dugim repom silueta ove ptičice podseća na džezvu. Gnežđenje počinje rano, ponekad već krajem februara. Gnezdo predstavlja kamuflažnu lopticu od perja, lišajeva, mahovina i ljuštura insekata smeštenu u rašlji drveta. Najčešće ih viđamo u manjim, prilično bučnim jatima tokom jeseni i zime.</string>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_home" translatesAutoresizingMaskIntoConstraints="NO" id="sr5-Fl-sSt">
-                                                <rect key="frame" x="15" y="746.66666666666663" width="70" height="70"/>
+                                                <rect key="frame" x="15" y="734.66666666666663" width="70" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="sr5-Fl-sSt" secondAttribute="height" multiplier="1:1" id="33w-5v-0WX"/>
                                                     <constraint firstAttribute="width" constant="70" id="yG4-yu-yw4"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_food" translatesAutoresizingMaskIntoConstraints="NO" id="JQh-Np-dvr">
-                                                <rect key="frame" x="15" y="821.66666666666663" width="70" height="70"/>
+                                                <rect key="frame" x="15" y="809.66666666666663" width="70" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="bYq-1h-dTM"/>
                                                     <constraint firstAttribute="width" secondItem="JQh-Np-dvr" secondAttribute="height" multiplier="1:1" id="z4l-xv-B0k"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i_warning" translatesAutoresizingMaskIntoConstraints="NO" id="HZ8-3q-Qlh">
-                                                <rect key="frame" x="30" y="891.66666666666663" width="40" height="40"/>
+                                                <rect key="frame" x="30" y="879.66666666666663" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="b4b-X6-LZ5"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gnezdarica" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WU-92-h4L">
-                                                <rect key="frame" x="105" y="761.66666666666663" width="294" height="50"/>
+                                                <rect key="frame" x="105" y="749.66666666666663" width="294" height="50"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glavna hrana ove ptice su: " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uh-zw-XcZ">
-                                                <rect key="frame" x="105" y="826.66666666666663" width="294" height="45"/>
+                                                <rect key="frame" x="105" y="814.66666666666663" width="294" height="45"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spada u ugrožene vrste u Srbiji." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouE-5D-gay">
-                                                <rect key="frame" x="105" y="891.66666666666663" width="294" height="23.333333333333371"/>
+                                                <rect key="frame" x="105" y="879.66666666666663" width="294" height="23.333333333333371"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                                 <color key="textColor" name="textColor"/>
                                                 <nil key="highlightedColor"/>

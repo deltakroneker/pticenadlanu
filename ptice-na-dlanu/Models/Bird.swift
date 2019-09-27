@@ -17,26 +17,28 @@ struct Bird: Codable {
     let duzinaTela, rasponKrila, masa, ishrana: String
     let gnezdaricaNegnezdarica, the1, ugrozena: String
     
-    var shapeArray: [BirdShape?] {
-        return silueta.components(separatedBy: ";").map {
+    var shapeArray: [BirdShape] {
+        return silueta.components(separatedBy: ";").compactMap {
             BirdShape.fromScheme(name: $0.trimmingCharacters(in: .whitespacesAndNewlines))
         }
     }
     
-    var locationArray: [BirdLocation?] {
-        return staniste.components(separatedBy: ";").map {
+    var locationArray: [BirdLocation] {
+        return staniste.components(separatedBy: ";").compactMap {
             BirdLocation.fromScheme(name: $0.trimmingCharacters(in: .whitespacesAndNewlines))
         }
     }
     
-    var featherColorArray: [FeatherColor?] {
-        return boje.components(separatedBy: ";").map {
+    var featherColorArray: [FeatherColor] {
+        return boje.components(separatedBy: ";").compactMap {
             FeatherColor.fromScheme(name: $0.trimmingCharacters(in: .whitespacesAndNewlines))
         }
     }
     
-    var femaleFeatherColorArray: String {
-        return bojeZenke
+    var femaleFeatherColorArray: [FeatherColor] {
+        return bojeZenke.components(separatedBy: ";").compactMap {
+            FeatherColor.fromScheme(name: $0.trimmingCharacters(in: .whitespacesAndNewlines))
+        }
     }
     
     enum CodingKeys: String, CodingKey {
@@ -74,6 +76,8 @@ struct BirdItem: Item {
     var genderString: String { return gender == .male ? " (m)" : " (ž)" }
     
     var hasFemaleVersion: Bool { return !bird.ilustracijeZenke.isEmpty }
+    var hasDifferentFemaleColors: Bool { return !bird.femaleFeatherColorArray.isEmpty }
+    
     var images: [String] {
         return bird.ilustracije.components(separatedBy: ";").map {
             $0.trimmingCharacters(in: .whitespacesAndNewlines)
