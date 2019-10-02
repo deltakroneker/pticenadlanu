@@ -36,9 +36,9 @@ class ListViewModel {
     func birdSearchFilter(bird: Bird, text: String) -> Bool {
         guard !text.isEmpty else { return true }
         
-        let foundInSrpskiNazivVrste = bird.srpskiNazivVrste.range(of: text, options: .caseInsensitive) != nil
-        let foundInPorodica = bird.srpskiNazivVrste.range(of: text, options: .caseInsensitive) != nil
-        let foundInNaucniNazivVrste = bird.naucniNazivVrste.range(of: text, options: .caseInsensitive) != nil
+        let foundInSrpskiNazivVrste = bird.srpskiNazivVrste.range(of: text, options: [.caseInsensitive, .diacriticInsensitive]) != nil
+        let foundInPorodica = bird.srpskiNazivVrste.range(of: text, options: [.caseInsensitive, .diacriticInsensitive]) != nil
+        let foundInNaucniNazivVrste = bird.naucniNazivVrste.range(of: text, options: [.caseInsensitive, .diacriticInsensitive]) != nil
 
         return foundInSrpskiNazivVrste || foundInPorodica || foundInNaucniNazivVrste
     }
