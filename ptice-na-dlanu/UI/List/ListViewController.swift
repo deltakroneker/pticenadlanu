@@ -70,6 +70,12 @@ extension ListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            return CGSize(width: collectionView.frame.width / 3 - 11,
+            height: collectionView.frame.width / 3 - 11)
+        }
+        
         return CGSize(width: collectionView.frame.width / 2 - 5,
                       height: collectionView.frame.width / 2 - 5)
     }

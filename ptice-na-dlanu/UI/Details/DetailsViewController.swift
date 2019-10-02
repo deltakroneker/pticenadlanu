@@ -30,6 +30,7 @@ class DetailsViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var endangeredImageView: UIImageView!
     @IBOutlet weak var endangeredLabel: UILabel!
+    @IBOutlet var imageHeight: NSLayoutConstraint!
     
     // MARK: - Vars & Lets
     
@@ -38,6 +39,10 @@ class DetailsViewController: UIViewController, Storyboarded {
     let bag = DisposeBag()
     
     let widthPercent: CGFloat = 0.5
+    
+    let regularImage: CGFloat = 250
+    let smallerImage: CGFloat = 210
+    let largerImage: CGFloat = 300
     
     let imagesDataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String, String>>(configureCell: {
         (dataSource, cv, indexPath, imageName) -> UICollectionViewCell in
@@ -51,10 +56,23 @@ class DetailsViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageCollectionView.delegate = self
+        tweakImageSize()
         setupBindings()
     }
     
     // MARK: - Methods
+    
+    fileprivate func tweakImageSize() {
+        if UIScreen.main.bounds.height <= 568 { // iPhone SE
+            imageHeight.constant = smallerImage
+        }
+        else if UIScreen.main.bounds.height <= 896 {
+            imageHeight.constant = regularImage
+        }
+        else {
+            imageHeight.constant = largerImage // iPads
+        }
+    }
     
     fileprivate func setupBindings() {
         viewModel.birdItem.asObservable()
@@ -63,7 +81,7 @@ class DetailsViewController: UIViewController, Storyboarded {
                 guard let self = self else { return }
                 let speciesName = NSMutableAttributedString(string: ($0?.srpskiNazivVrste ?? "") + " ")
                 speciesName.append(NSMutableAttributedString(string: "(" + ($0?.naucniNazivVrste ?? "") + ")",
-                                                             attributes: [NSAttributedString.Key.font: UIFont(name: "OpenSans-Italic", size: 17)!]))
+                                                             attributes: [NSAttributedString.Key.font: UIFont(name: "OpenSans-Italic", size: 15)!]))
                 self.speciesNameLabel.attributedText = speciesName
                 self.familyNameLabel.text = $0?.porodica
                 self.birdLengthLabel.text = ($0?.duzinaTela ?? "-") + " cm"

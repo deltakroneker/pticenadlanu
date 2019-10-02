@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--List View Controller-->
         <scene sceneID="Q75-p9-awB">
@@ -40,14 +43,14 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="184" height="184"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y1x-rO-p5R">
-                                                            <rect key="frame" x="18.5" y="0.0" width="147" height="147"/>
+                                                            <rect key="frame" x="27.5" y="0.0" width="129" height="129"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Y1x-rO-p5R" secondAttribute="height" multiplier="1:1" id="6VE-7B-DgQ"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naziv" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Q3-nT-4fa">
-                                                            <rect key="frame" x="0.0" y="147" width="184" height="37"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Naziv" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Q3-nT-4fa">
+                                                            <rect key="frame" x="4" y="129" width="176" height="55"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -55,12 +58,12 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="Y1x-rO-p5R" firstAttribute="centerX" secondItem="VNh-QZ-aCo" secondAttribute="centerX" id="GEt-wb-pRY"/>
-                                                        <constraint firstItem="Y1x-rO-p5R" firstAttribute="height" secondItem="VNh-QZ-aCo" secondAttribute="height" multiplier="0.8" id="JCJ-Yl-G8F"/>
-                                                        <constraint firstAttribute="trailing" secondItem="5Q3-nT-4fa" secondAttribute="trailing" id="KWk-36-1eT"/>
+                                                        <constraint firstItem="Y1x-rO-p5R" firstAttribute="height" secondItem="VNh-QZ-aCo" secondAttribute="height" multiplier="0.7" id="JCJ-Yl-G8F"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5Q3-nT-4fa" secondAttribute="trailing" constant="4" id="KWk-36-1eT"/>
                                                         <constraint firstItem="5Q3-nT-4fa" firstAttribute="top" secondItem="Y1x-rO-p5R" secondAttribute="bottom" id="Qza-T6-PJf"/>
-                                                        <constraint firstItem="5Q3-nT-4fa" firstAttribute="leading" secondItem="VNh-QZ-aCo" secondAttribute="leading" id="Snx-t9-a9c"/>
+                                                        <constraint firstItem="5Q3-nT-4fa" firstAttribute="leading" secondItem="VNh-QZ-aCo" secondAttribute="leading" constant="4" id="Snx-t9-a9c"/>
                                                         <constraint firstItem="Y1x-rO-p5R" firstAttribute="top" secondItem="VNh-QZ-aCo" secondAttribute="top" id="TZG-oF-zj0"/>
-                                                        <constraint firstItem="5Q3-nT-4fa" firstAttribute="height" secondItem="VNh-QZ-aCo" secondAttribute="height" multiplier="0.2" id="Vq3-ok-aMS"/>
+                                                        <constraint firstItem="5Q3-nT-4fa" firstAttribute="height" secondItem="VNh-QZ-aCo" secondAttribute="height" multiplier="0.3" id="Vq3-ok-aMS"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

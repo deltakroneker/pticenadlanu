@@ -28,7 +28,17 @@ class HomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var navBarRightItem: UIBarButtonItem!
     @IBOutlet weak var navBarLeftItem: UIBarButtonItem!
     
+    @IBOutlet var shapesTop: NSLayoutConstraint!
+    @IBOutlet var locationsTop: NSLayoutConstraint!
+    @IBOutlet var colorsTop: NSLayoutConstraint!
+    @IBOutlet var colorsLeft: NSLayoutConstraint!
+    @IBOutlet var colorStackVertical: UIStackView!
+    
     // MARK: - Vars & Lets
+    
+    let filterSpacingRegular: CGFloat = 20
+    let filterSpacingLarger: CGFloat = 30
+    let filterSpacingXlarge: CGFloat = 40
     
     let shapeGradientLayer = ItemGradientLayer()
     let locationGradientLayer = ItemGradientLayer()
@@ -85,6 +95,27 @@ class HomeViewController: UIViewController, Storyboarded {
         }
         shapeContainerView.layer.mask = shapeGradientLayer
         locationContainerView.layer.mask = locationGradientLayer
+        
+        if UIScreen.main.bounds.height <= 568 {
+            shapesTop.constant = filterSpacingRegular
+            locationsTop.constant = filterSpacingRegular
+            colorsTop.constant = filterSpacingRegular
+        }
+        else if UIScreen.main.bounds.height <= 736 {
+            shapesTop.constant = filterSpacingLarger
+            locationsTop.constant = filterSpacingLarger
+            colorsTop.constant = filterSpacingLarger
+        }
+        else {
+            shapesTop.constant = filterSpacingXlarge
+            locationsTop.constant = filterSpacingXlarge
+            colorsTop.constant = filterSpacingXlarge
+        }
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            colorsLeft.constant = 100
+            colorStackVertical.spacing = 30
+        }
     }
     
     fileprivate func setupBindings() {
