@@ -75,8 +75,8 @@ extension HomeViewModel {
                 var filteredBirds = [BirdItem]()
                 for bird in birds {
                     
-                    let colorSatisfied = Set(bird.featherColorArray).intersection(colors).count > 0 || colors.isEmpty
-                    let femaleColorSatisfied = Set(bird.femaleFeatherColorArray).intersection(colors).count > 0 || colors.isEmpty
+                    let colorSatisfied = Set(bird.featherColorArray).isSuperset(of: colors) || colors.isEmpty
+                    let femaleColorSatisfied = Set(bird.femaleFeatherColorArray).isSuperset(of: colors) || colors.isEmpty
                     let shapeSatisfied = bird.shapeArray.contains(shape) || shape == .all
                     let locationSatisfied = bird.locationArray.contains(location) || location == .all
                     

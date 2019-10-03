@@ -30,7 +30,7 @@ class DetailsViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var endangeredImageView: UIImageView!
     @IBOutlet weak var endangeredLabel: UILabel!
-    @IBOutlet var imageHeight: NSLayoutConstraint!
+    @IBOutlet var collectionViewHeight: NSLayoutConstraint!
     
     // MARK: - Vars & Lets
     
@@ -64,13 +64,13 @@ class DetailsViewController: UIViewController, Storyboarded {
     
     fileprivate func tweakImageSize() {
         if UIScreen.main.bounds.height <= 568 { // iPhone SE
-            imageHeight.constant = smallerImage
+            collectionViewHeight.constant = smallerImage
         }
         else if UIScreen.main.bounds.height <= 896 {
-            imageHeight.constant = regularImage
+            collectionViewHeight.constant = regularImage
         }
         else {
-            imageHeight.constant = largerImage // iPads
+            collectionViewHeight.constant = largerImage // iPads
         }
     }
     
@@ -114,7 +114,7 @@ extension DetailsViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width / 2 - 10,
-                      height: collectionView.frame.width / 2 - 10)
+                      height: collectionView.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView,

@@ -338,13 +338,13 @@
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="birdLengthLabel" destination="cct-Wc-BPL" id="uBR-3H-60o"/>
+                        <outlet property="collectionViewHeight" destination="bbb-N3-ddu" id="HPz-ig-Yow"/>
                         <outlet property="descriptionLabel" destination="Zzx-4C-5ni" id="cSZ-bK-p4h"/>
                         <outlet property="endangeredImageView" destination="HZ8-3q-Qlh" id="QNv-su-nGE"/>
                         <outlet property="endangeredLabel" destination="ouE-5D-gay" id="pRc-Sb-6ds"/>
                         <outlet property="familyNameLabel" destination="Luj-xv-lfH" id="2kW-jG-vwi"/>
                         <outlet property="foodLabel" destination="0uh-zw-XcZ" id="lza-4Q-Yp2"/>
                         <outlet property="imageCollectionView" destination="LH1-Hc-XZz" id="rKb-eJ-qVy"/>
-                        <outlet property="imageHeight" destination="bbb-N3-ddu" id="HPz-ig-Yow"/>
                         <outlet property="imagePageControl" destination="KV2-3V-1U9" id="na3-81-O3M"/>
                         <outlet property="nestLabel" destination="4WU-92-h4L" id="xE5-mu-bGE"/>
                         <outlet property="speciesNameLabel" destination="6zu-w9-Xgh" id="MOr-JK-Lzt"/>
