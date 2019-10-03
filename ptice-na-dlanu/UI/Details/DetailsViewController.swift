@@ -42,7 +42,7 @@ class DetailsViewController: UIViewController, Storyboarded {
     
     let regularImage: CGFloat = 250
     let smallerImage: CGFloat = 210
-    let largerImage: CGFloat = 300
+    let largerImage: CGFloat = 350
     
     let imagesDataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String, String>>(configureCell: {
         (dataSource, cv, indexPath, imageName) -> UICollectionViewCell in
