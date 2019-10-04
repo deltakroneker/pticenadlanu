@@ -36,11 +36,23 @@ class ListViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         birdCollectionView.delegate = self
-        searchBar.delegate = self
+        
+        setupSearchBar()
         setupBindings()
     }
     
     // MARK: - Methods
+    
+    fileprivate func setupSearchBar() {
+        searchBar.delegate = self
+        
+        // Fonts
+        let searchBarFont = UIFont.init(name: "OpenSans-Regular", size: 16.0)
+        let textFieldInsideUISearchBar = searchBar.value(forKey: "searchField") as? UITextField
+        textFieldInsideUISearchBar?.font = searchBarFont // Text
+        let textFieldInsideUISearchBarLabel = textFieldInsideUISearchBar!.value(forKey: "placeholderLabel") as? UILabel
+        textFieldInsideUISearchBarLabel?.font = searchBarFont // Placeholder
+    }
     
     fileprivate func setupBindings() {
         let input = ListViewModel.Input(searchText: searchBar.rx.text.orEmpty.asObservable())
