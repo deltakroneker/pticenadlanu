@@ -32,6 +32,7 @@ class HomeViewController: UIViewController, Storyboarded {
     @IBOutlet var locationsTop: NSLayoutConstraint!
     @IBOutlet var colorsTop: NSLayoutConstraint!
     @IBOutlet var colorsLeft: NSLayoutConstraint!
+    @IBOutlet var colorsRight: NSLayoutConstraint!
     @IBOutlet var colorStackVertical: UIStackView!
     
     // MARK: - Vars & Lets
@@ -114,6 +115,7 @@ class HomeViewController: UIViewController, Storyboarded {
         
         if UIDevice.current.userInterfaceIdiom == .pad {
             colorsLeft.constant = 100
+            colorsRight.constant = 100
             colorStackVertical.spacing = 30
         }
     }

@@ -382,6 +382,7 @@
                     <connections>
                         <outlet property="colorStackVertical" destination="mt2-N2-rEW" id="mZO-Oi-mxB"/>
                         <outlet property="colorsLeft" destination="btq-KE-m66" id="YYI-JZ-cix"/>
+                        <outlet property="colorsRight" destination="yKM-Ye-sDZ" id="J9P-m1-Uma"/>
                         <outlet property="colorsTop" destination="0Sl-YB-pVn" id="Fwy-jA-L2x"/>
                         <outlet property="locationCollectionView" destination="zmt-NV-nyE" id="SkU-MG-neD"/>
                         <outlet property="locationContainerView" destination="lZw-k2-ggb" id="hIj-Dj-KJY"/>
