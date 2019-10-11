@@ -37,9 +37,7 @@ class DetailsViewController: UIViewController, Storyboarded {
     weak var coordinator: AppCoordinator?
     var viewModel: DetailsViewModel!
     let bag = DisposeBag()
-    
-    let widthPercent: CGFloat = 0.5
-    
+        
     let regularImage: CGFloat = 250
     let smallerImage: CGFloat = 210
     let largerImage: CGFloat = 350
@@ -113,21 +111,21 @@ extension DetailsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width / 2 - 10,
+        return CGSize(width: collectionView.frame.height,
                       height: collectionView.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return collectionView.frame.width / 2
+        return collectionView.frame.width - collectionView.frame.height
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: collectionView.frame.width * (1 - widthPercent) / 2,
-                            bottom: 0, right: collectionView.frame.width * (1 - widthPercent) / 2)
+        return UIEdgeInsets(top: 0, left: (collectionView.frame.width - collectionView.frame.height) / 2,
+                            bottom: 0, right: (collectionView.frame.width - collectionView.frame.height) / 2)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
