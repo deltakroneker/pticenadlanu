@@ -78,6 +78,8 @@ class HomeViewController: UIViewController, Storyboarded {
         super.viewDidLayoutSubviews()
         shapeGradientLayer.frame = shapeContainerView.bounds
         locationGradientLayer.frame = locationContainerView.bounds
+        shapeCollectionView.collectionViewLayout.invalidateLayout()
+        locationCollectionView.collectionViewLayout.invalidateLayout()
     }
     
     // MARK: - Methods
@@ -121,7 +123,7 @@ class HomeViewController: UIViewController, Storyboarded {
     }
     
     fileprivate func setupBindings() {
-        let shapeDragging = shapeCollectionView.rx.didEndDragging.filter { $0 == false }
+        let shapeDragging = shapeCollectionView.rx.didEndDragging.asObservable().filter { $0 == false }.startWith(false)
         let shapeScrolling = shapeCollectionView.rx.didEndScrollingAnimation.asObservable().startWith(())
         let shapeDecelerating = shapeCollectionView.rx.didEndDecelerating.asObservable().startWith(())
 
@@ -131,11 +133,11 @@ class HomeViewController: UIViewController, Storyboarded {
             .map { [weak self] () -> BirdShape? in
                 guard let indexPath = self?.shapeCollectionView.centerCellIndexPath,
                     let cell = self?.shapeCollectionView.cellForItem(at: indexPath) as? ImageWithTitleCell,
-                    let item = cell.viewModel as? ShapeItem else { return nil }
+                    let item = cell.viewModel as? ShapeItem else { return .all }
                 return item.shape
-            }.startWith(.all)
+            }
         
-        let locationDragging = locationCollectionView.rx.didEndDragging.filter { $0 == false }
+        let locationDragging = locationCollectionView.rx.didEndDragging.asObservable().filter { $0 == false }.startWith(false)
         let locationScrolling = locationCollectionView.rx.didEndScrollingAnimation.asObservable().startWith(())
         let locationDecelerating = locationCollectionView.rx.didEndDecelerating.asObservable().startWith(())
         
@@ -145,9 +147,9 @@ class HomeViewController: UIViewController, Storyboarded {
             .map { [weak self] () -> BirdLocation? in
                 guard let indexPath = self?.locationCollectionView.centerCellIndexPath,
                     let cell = self?.locationCollectionView.cellForItem(at: indexPath) as? ImageWithTitleCell,
-                    let item = cell.viewModel as? LocationItem else { return nil }
+                    let item = cell.viewModel as? LocationItem else { return .all }
                 return item.location
-            }.startWith(.all)
+            }
         
         let input = HomeViewModel.Input(shape: shapeInput, location: locationInput)
         let output = viewModel.transform(input: input)
