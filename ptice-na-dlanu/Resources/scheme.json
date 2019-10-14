@@ -16,7 +16,7 @@
         "Dužina tela (cm)": "32-35",
         "Raspon krila (cm)": "50-55",
         "Masa (g)": "250-400",
-        "Ishrana": "vodene biljke, semena, puževe, gliste, insekte i sitne ribe",
+        "Ishrana": "vodene biljke, semena, puževi, gliste, insekti i sitne ribe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (oko 10 hiljada parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "NE"
@@ -82,7 +82,7 @@
         "Dužina tela (cm)": "23-28",
         "Raspon krila (cm)": "38-45",
         "Masa (g)": "80-180",
-        "Ishrana": "sitna riba, puževi, insekti i dr",
+        "Ishrana": "sitne ribe, puževi, insekti",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 10 hiljada parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "NE"
@@ -170,7 +170,7 @@
         "Dužina tela (cm)": "100-102",
         "Raspon krila (cm)": "155-165",
         "Masa (g)": "2275-4400",
-        "Ishrana": "beskičmenjaci, žabe, gmizavci, sitni sisari i riba",
+        "Ishrana": "beskičmenjaci, žabe, gmizavci, sitni sisari i ribe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 10 hiljada parova).",
         "__1": "Redovna i na seobi, izuzetno i prezimljava.",
         "Ugrožena (DA/NE)": "NE"
@@ -192,7 +192,7 @@
         "Dužina tela (cm)": "23-29",
         "Raspon krila (cm)": "64-70",
         "Masa (g)": "60-101",
-        "Ishrana": "insekti, sitna riba, vodozemci, rakovi",
+        "Ishrana": "insekti, sitne ribe, vodozemci, rakovi",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 10 hiljada parova).",
         "__1": "Redovna i na seobi.",
         "Ugrožena (DA/NE)": "NE"
@@ -236,7 +236,7 @@
         "Dužina tela (cm)": "23-27",
         "Raspon krila (cm)": "58-67",
         "Masa (g)": "42-79",
-        "Ishrana": "vodeni insekti, sitna riba, punoglavci",
+        "Ishrana": "vodeni insekti, sitne ribe, punoglavci",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od 10 parova).",
         "__1": "Redovna i na seobi.",
         "Ugrožena (DA/NE)": "DA"
@@ -258,7 +258,7 @@
         "Dužina tela (cm)": "66-94",
         "Raspon krila (cm)": "178-245",
         "Masa (g)": "4000-6900",
-        "Ishrana": "riba, ptice, sisari, lešine",
+        "Ishrana": "ribe, ptice, sisari, lešine",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od hiljadu parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "NE"
@@ -412,7 +412,7 @@
         "Dužina tela (cm)": "45-50",
         "Raspon krila (cm)": "82-95",
         "Masa (g)": "300-400",
-        "Ishrana": "insekti, crvi, gmizavci, žabe i dr",
+        "Ishrana": "insekti, crvi, gmizavci, žabe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od 10 parova).",
         "__1": "Posmatrana tokom seobe i lutanja.",
         "Ugrožena (DA/NE)": "NE"
@@ -434,7 +434,7 @@
         "Dužina tela (cm)": "33-38",
         "Raspon krila (cm)": "49-58",
         "Masa (g)": "59-150",
-        "Ishrana": "riba, insekti, vodozemci",
+        "Ishrana": "ribe, insekti, vodozemci",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 10 hiljada parova).",
         "__1": "Redovna i na seobi.",
         "Ugrožena (DA/NE)": "NE"
@@ -566,7 +566,7 @@
         "Dužina tela (cm)": "23-28",
         "Raspon krila (cm)": "57-65",
         "Masa (g)": "60-68",
-        "Ishrana": "vodeni insekti, sitna riba, punoglavci, žabe",
+        "Ishrana": "vodeni insekti, sitne ribe, punoglavci, žabe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od 10 parova).",
         "__1": "Redovna i na seobi.",
         "Ugrožena (DA/NE)": "DA"
@@ -654,7 +654,7 @@
         "Dužina tela (cm)": "95-100",
         "Raspon krila (cm)": "144-155",
         "Masa (g)": "3000",
-        "Ishrana": "riba, vodozemci, insekti, puževi i dr",
+        "Ishrana": "ribe, vodozemci, insekti, puževi",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od hiljadu parova).",
         "__1": "Redovna i na seobi, izuzetno i prezimljava.",
         "Ugrožena (DA/NE)": "NE"
@@ -720,7 +720,7 @@
         "Dužina tela (cm)": "29-31",
         "Raspon krila (cm)": "61-67",
         "Masa (g)": "140-200",
-        "Ishrana": "insekti, rakovi, sitna riba, crvi",
+        "Ishrana": "insekti, rakovi, sitne ribe, crvi",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Redovan na seobi.",
         "Ugrožena (DA/NE)": "NE"
@@ -808,7 +808,7 @@
         "Dužina tela (cm)": "36-38",
         "Raspon krila (cm)": "92-100",
         "Masa (g)": "230-280",
-        "Ishrana": "insekti, riba, lešine",
+        "Ishrana": "insekti, ribe, lešine",
         "Gnezdarica/Negnezdarica": "Gnezdarica (oko sto parova).",
         "__1": "Redak na seobi, izuzetno i zimuje.",
         "Ugrožena (DA/NE)": "DA"
@@ -852,7 +852,7 @@
         "Dužina tela (cm)": "58-73",
         "Raspon krila (cm)": "110-130",
         "Masa (g)": "2300-3400",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Redak na zimovanju.",
         "Ugrožena (DA/NE)": "DA"
@@ -918,7 +918,7 @@
         "Dužina tela (cm)": "28-34",
         "Raspon krila (cm)": "56-60",
         "Masa (g)": "250-350",
-        "Ishrana": "insekti, rakovi, sitna riba",
+        "Ishrana": "insekti, rakovi, sitne ribe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od hiljadu parova).",
         "__1": "Redovna na seobi, zimuje u malom broju.",
         "Ugrožena (DA/NE)": "DA"
@@ -1094,7 +1094,7 @@
         "Dužina tela (cm)": "46-51",
         "Raspon krila (cm)": "85-90",
         "Masa (g)": "590-1500",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 10 hiljada parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "NE"
@@ -1490,7 +1490,7 @@
         "Dužina tela (cm)": "58-65",
         "Raspon krila (cm)": "90-100",
         "Masa (g)": "280-1100",
-        "Ishrana": "riba, pijavice, gliste, insekto",
+        "Ishrana": "ribe, pijavice, gliste, insekti",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 10 hiljada parova).",
         "__1": "Redovna na seobi, sporadično i zimuje.",
         "Ugrožena (DA/NE)": "NE"
@@ -1864,7 +1864,7 @@
         "Dužina tela (cm)": "80-90",
         "Raspon krila (cm)": "120-135",
         "Masa (g)": "1300-2000",
-        "Ishrana": "vodeni beskičmenjaci i sitna riba",
+        "Ishrana": "vodeni beskičmenjaci i sitne ribe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od hiljadu parova).",
         "__1": "Redovna na seobi, a beleži se i na zimovanju.",
         "Ugrožena (DA/NE)": "NE"
@@ -2040,7 +2040,7 @@
         "Dužina tela (cm)": "32",
         "Raspon krila (cm)": "69",
         "Masa (g)": "190",
-        "Ishrana": "crvi, puževi, riba",
+        "Ishrana": "crvi, puževi, ribe",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Redovan na seobi, sporadičan zimi.",
         "Ugrožena (DA/NE)": "NE"
@@ -2106,7 +2106,7 @@
         "Dužina tela (cm)": "160-180",
         "Raspon krila (cm)": "270-320",
         "Masa (g)": "10000-13000",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Sreće se na lutanju.",
         "Ugrožena (DA/NE)": "NE"
@@ -2172,7 +2172,7 @@
         "Dužina tela (cm)": "33-39",
         "Raspon krila (cm)": "80-95",
         "Masa (g)": "250-350",
-        "Ishrana": "miševi, voluharice, rovčice, sitne ptice i dr",
+        "Ishrana": "miševi, voluharice, rovčice, sitne ptice",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 10 hiljada parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "NE"
@@ -2282,7 +2282,7 @@
         "Dužina tela (cm)": "35-37",
         "Raspon krila (cm)": "45-48",
         "Masa (g)": "300-430",
-        "Ishrana": "cvetovi, pupoljci, semenje, bobice, voće i dr",
+        "Ishrana": "cvetovi, pupoljci, semenje, bobice, voće",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 10 hiljada parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "NE"
@@ -2348,7 +2348,7 @@
         "Dužina tela (cm)": "14,5",
         "Raspon krila (cm)": "22-25",
         "Masa (g)": "15-22",
-        "Ishrana": "insekti I paukovi",
+        "Ishrana": "insekti i paukovi",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Posmatrana tokom seobe i zimovanja.",
         "Ugrožena (DA/NE)": "NE"
@@ -2370,7 +2370,7 @@
         "Dužina tela (cm)": "55-65",
         "Raspon krila (cm)": "88-95",
         "Masa (g)": "350-550",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 10 hiljada parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "NE"
@@ -2392,7 +2392,7 @@
         "Dužina tela (cm)": "37-45",
         "Raspon krila (cm)": "78-88",
         "Masa (g)": "270-450",
-        "Ishrana": "insekti, puževi, mekušći, gliste",
+        "Ishrana": "insekti, puževi, mekušci, gliste",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Redovna na seobi, sporadično i zimuje.",
         "Ugrožena (DA/NE)": "NE"
@@ -2414,7 +2414,7 @@
         "Dužina tela (cm)": "22-24",
         "Raspon krila (cm)": "48-55",
         "Masa (g)": "49-63",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od 100 parova).",
         "__1": "Redovna i na seobi.",
         "Ugrožena (DA/NE)": "DA"
@@ -2524,7 +2524,7 @@
         "Dužina tela (cm)": "25-29",
         "Raspon krila (cm)": "40-45",
         "Masa (g)": "100-140",
-        "Ishrana": "insekti, sitna riba",
+        "Ishrana": "insekti, sitne ribe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 10 hiljada parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "NE"
@@ -2546,7 +2546,7 @@
         "Dužina tela (cm)": "36-44",
         "Raspon krila (cm)": "55-69",
         "Masa (g)": "500-800",
-        "Ishrana": "riba, insekti i njihove larve",
+        "Ishrana": "ribe, insekti i njihove larve",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Redovan na zimovanju.",
         "Ugrožena (DA/NE)": "DA"
@@ -2612,7 +2612,7 @@
         "Dužina tela (cm)": "45-55",
         "Raspon krila (cm)": "75-90",
         "Masa (g)": "565-870",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (oko hiljadu parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "NE"
@@ -2678,7 +2678,7 @@
         "Dužina tela (cm)": "30-32",
         "Raspon krila (cm)": "66-73",
         "Masa (g)": "127-160",
-        "Ishrana": "insekti, drugi beskičmenjaci, gušteri i dr.",
+        "Ishrana": "insekti, drugi beskičmenjaci, gušteri",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od hiljadu parova).",
         "__1": "Redovna i na seobi.",
         "Ugrožena (DA/NE)": "NE"
@@ -2722,7 +2722,7 @@
         "Dužina tela (cm)": "52-68",
         "Raspon krila (cm)": "120-145",
         "Masa (g)": "420-1600",
-        "Ishrana": "riba, beskičmenjaci, sisari, otpaci",
+        "Ishrana": "ribe, beskičmenjaci, sisari, otpaci",
         "Gnezdarica/Negnezdarica": "Ne gnezde se u Srbiji.",
         "__1": "Posetioci na zimovanju i seobi.",
         "Ugrožena (DA/NE)": "NE"
@@ -2832,7 +2832,7 @@
         "Dužina tela (cm)": "31-35",
         "Raspon krila (cm)": "77-98",
         "Masa (g)": "90-150",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od hiljadu parova).",
         "__1": "Redovna i na seobi.",
         "Ugrožena (DA/NE)": "DA"
@@ -2964,7 +2964,7 @@
         "Dužina tela (cm)": "34-37",
         "Raspon krila (cm)": "100-110",
         "Masa (g)": "200-400",
-        "Ishrana": "crvi, gliste, insekti, riba, lešine, smeće",
+        "Ishrana": "crvi, gliste, insekti, ribe, lešine, smeće",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 10 hiljada parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "NE"
@@ -3096,7 +3096,7 @@
         "Dužina tela (cm)": "42-50",
         "Raspon krila (cm)": "65-80",
         "Masa (g)": "650-1200",
-        "Ishrana": "pkoljke, larve insekata, sitnija riba, rastinje",
+        "Ishrana": "školjke, larve insekata, sitnije ribe, rastinje",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Redovna na zimovanju, retka na seobi.",
         "Ugrožena (DA/NE)": "DA"
@@ -3492,7 +3492,7 @@
         "Dužina tela (cm)": "26-28",
         "Raspon krila (cm)": "42-46",
         "Masa (g)": "47-87",
-        "Ishrana": "insekti. paukovi",
+        "Ishrana": "insekti, paukovi",
         "Gnezdarica/Negnezdarica": "Gnezdarica (oko 10 hiljada parova).",
         "__1": "Redovna i na seobi.",
         "Ugrožena (DA/NE)": "NE"
@@ -3514,7 +3514,7 @@
         "Dužina tela (cm)": "16,5-17",
         "Raspon krila (cm)": "17-19",
         "Masa (g)": "27-32",
-        "Ishrana": "insekti I paukovi",
+        "Ishrana": "insekti, paukovi",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od 100 parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "DA"
@@ -3558,7 +3558,7 @@
         "Dužina tela (cm)": "52-60",
         "Raspon krila (cm)": "152-167",
         "Masa (g)": "1200-2000",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Redovan na seobi.",
         "Ugrožena (DA/NE)": "NE"
@@ -3624,7 +3624,7 @@
         "Dužina tela (cm)": "43-62",
         "Raspon krila (cm)": "112-160",
         "Masa (g)": "590-1760",
-        "Ishrana": "sitni sisari, gušteri i dr",
+        "Ishrana": "sitni sisari, gušteri",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od 100 parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "DA"
@@ -3646,7 +3646,7 @@
         "Dužina tela (cm)": "42-49",
         "Raspon krila (cm)": "72-82",
         "Masa (g)": "470-1250",
-        "Ishrana": "vodeno rastinje, trava, puževi, insekti i dr",
+        "Ishrana": "vodeno rastinje, trava, puževi, insekti",
         "Gnezdarica/Negnezdarica": "Gnezdarica (oko hiljadu parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "DA"
@@ -3668,7 +3668,7 @@
         "Dužina tela (cm)": "53-69",
         "Raspon krila (cm)": "106-116",
         "Masa (g)": "1200-1600",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Redak na zimovanju.",
         "Ugrožena (DA/NE)": "DA"
@@ -3690,7 +3690,7 @@
         "Dužina tela (cm)": "40-46",
         "Raspon krila (cm)": "77-85",
         "Masa (g)": "700-900",
-        "Ishrana": "riba, rakovi, vodeni insekti",
+        "Ishrana": "ribe, rakovi, vodeni insekti",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od 10 parova).",
         "__1": "Sporadična na seobi i zimi.",
         "Ugrožena (DA/NE)": "DA"
@@ -3778,7 +3778,7 @@
         "Dužina tela (cm)": "140-175",
         "Raspon krila (cm)": "245-295",
         "Masa (g)": "9000-15000",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Sreće se na lutanju.",
         "Ugrožena (DA/NE)": "NE"
@@ -3976,7 +3976,7 @@
         "Dužina tela (cm)": "90-98",
         "Raspon krila (cm)": "175-200",
         "Masa (g)": "1500-2000",
-        "Ishrana": "riba, žabe, retko manje ptice i sisari",
+        "Ishrana": "ribe, žabe, retko manje ptice i sisari",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 10 hiljada parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "NE"
@@ -4130,7 +4130,7 @@
         "Dužina tela (cm)": "40-42",
         "Raspon krila (cm)": "110-130",
         "Masa (g)": "300-480",
-        "Ishrana": "crvi, gliste, insekti, riba, lešine, smeće",
+        "Ishrana": "crvi, gliste, insekti, ribe, lešine, smeće",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Posetilac na zimovanju i seobi.",
         "Ugrožena (DA/NE)": "NE"
@@ -4262,7 +4262,7 @@
         "Dužina tela (cm)": "19-21",
         "Raspon krila (cm)": "36-40",
         "Masa (g)": "50-90",
-        "Ishrana": "insekti, paukovi, crvi, rakovi, sitna riba i dr",
+        "Ishrana": "insekti, paukovi, crvi, rakovi, sitne ribe",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Redovan na seobi.",
         "Ugrožena (DA/NE)": "NE"
@@ -4306,7 +4306,7 @@
         "Dužina tela (cm)": "20-32",
         "Raspon krila (cm)": "46-58",
         "Masa (g)": "70-150",
-        "Ishrana": "insekti i njihove larve, sitna riba, žabe, semenje",
+        "Ishrana": "insekti i njihove larve, sitne ribe, žabe, semenje",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Prisutan samo na seobi.",
         "Ugrožena (DA/NE)": "NE"
@@ -4372,7 +4372,7 @@
         "Dužina tela (cm)": "52-58",
         "Raspon krila (cm)": "70-86",
         "Masa (g)": "900-1350",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Redak na zimovanju i seobi.",
         "Ugrožena (DA/NE)": "NE"
@@ -4394,7 +4394,7 @@
         "Dužina tela (cm)": "16,5-17",
         "Raspon krila (cm)": "25-28",
         "Masa (g)": "17-32",
-        "Ishrana": "insekti i dr. beskičmenjaci, semenje",
+        "Ishrana": "insekti i drugi beskičmenjaci, semenje",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 10 hiljada parova).",
         "__1": "Redovna i na seobi.",
         "Ugrožena (DA/NE)": "NE"
@@ -4526,7 +4526,7 @@
         "Dužina tela (cm)": "37-39",
         "Raspon krila (cm)": "94-104",
         "Masa (g)": "330-590",
-        "Ishrana": "sitni sisari i ptice, žabe i dr",
+        "Ishrana": "sitni sisari i ptice, žabe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 100 hiljada parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "NE"
@@ -4570,7 +4570,7 @@
         "Dužina tela (cm)": "12-13",
         "Raspon krila (cm)": "19-24",
         "Masa (g)": "8-12",
-        "Ishrana": "insekti I paukovi",
+        "Ishrana": "insekti, paukovi",
         "Gnezdarica/Negnezdarica": "Gnezdarica (oko hiljadu parova).",
         "__1": "Redovna i na seobi.",
         "Ugrožena (DA/NE)": "NE"
@@ -4768,7 +4768,7 @@
         "Dužina tela (cm)": "31-38",
         "Raspon krila (cm)": "59-65",
         "Masa (g)": "360-450",
-        "Ishrana": "riba, larve insekata",
+        "Ishrana": "ribe, larve insekata",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Sreće se na lutanju.",
         "Ugrožena (DA/NE)": "NE"
@@ -4900,7 +4900,7 @@
         "Dužina tela (cm)": "48-56",
         "Raspon krila (cm)": "127-140",
         "Masa (g)": "570-780",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Ne gnezdi se u Srbiji.",
         "__1": "Sporadičan gost na seobi i lutanju.",
         "Ugrožena (DA/NE)": "DA"
@@ -5054,7 +5054,7 @@
         "Dužina tela (cm)": "58-66",
         "Raspon krila (cm)": "82-97",
         "Masa (g)": "900-2100",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od 100 parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "DA"
@@ -5142,7 +5142,7 @@
         "Dužina tela (cm)": "77-94",
         "Raspon krila (cm)": "121-149",
         "Masa (g)": "2100-2500",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (do 10 hiljada parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "NE"
@@ -5274,7 +5274,7 @@
         "Dužina tela (cm)": "64-80",
         "Raspon krila (cm)": "125-135",
         "Masa (g)": "650-2050",
-        "Ishrana": "riba",
+        "Ishrana": "ribe",
         "Gnezdarica/Negnezdarica": "Gnezdarica (manje od hiljadu parova).",
         "__1": "Prisutna tokom cele godine.",
         "Ugrožena (DA/NE)": "NE"
@@ -5428,7 +5428,7 @@
         "Dužina tela (cm)": "110-120",
         "Raspon krila (cm)": "220-245",
         "Masa (g)": "4000-7000",
-        "Ishrana": "zrnevlje, korenje, insekte, puževe i gliste",
+        "Ishrana": "zrnevlje, korenje, insekti, puževi i gliste",
         "Gnezdarica/Negnezdarica": "Nekada se gnezdio i u Srbiji.",
         "__1": "U savremeno doba samo na seobi, ređe i na zimovanju.",
         "Ugrožena (DA/NE)": "NE"
@@ -5582,7 +5582,7 @@
         "Dužina tela (cm)": "42-47",
         "Raspon krila (cm)": "80-92",
         "Masa (g)": "230-370",
-        "Ishrana": "larve vodenih insekata, ribe, vodozemci i dr",
+        "Ishrana": "larve vodenih insekata, ribe, vodozemci",
         "Gnezdarica/Negnezdarica": "Gnezdarica (oko hiljadu parova).",
         "__1": "Redovna i na seobi.",
         "Ugrožena (DA/NE)": "NE"

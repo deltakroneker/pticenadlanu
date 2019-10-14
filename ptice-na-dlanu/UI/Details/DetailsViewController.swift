@@ -32,6 +32,9 @@ class DetailsViewController: UIViewController, Storyboarded {
     @IBOutlet weak var endangeredLabel: UILabel!
     @IBOutlet var collectionViewHeight: NSLayoutConstraint!
     
+    @IBOutlet var endangeredImageHeight: NSLayoutConstraint!
+    @IBOutlet var endangeredBottom: NSLayoutConstraint!
+    
     // MARK: - Vars & Lets
     
     weak var coordinator: AppCoordinator?
@@ -87,9 +90,26 @@ class DetailsViewController: UIViewController, Storyboarded {
                 self.weightLabel.text = ($0?.masa ?? "-") + " g"
                 self.descriptionLabel.text = $0?.glavniTekst
                 self.nestLabel.text = ($0?.gnezdaricaNegnezdarica ?? "") + " " + ($0?.the1 ?? "")
-                self.foodLabel.text = "Glavna hrana ove ptice su: " + ($0?.ishrana ?? "")
-                self.endangeredLabel.isHidden = ($0?.ugrozena == "NE")
-                self.endangeredImageView.isHidden = ($0?.ugrozena == "NE")
+                
+                let foodDesc = $0?.ishrana ?? ""
+                var foodText = ""
+                
+                if (foodDesc.contains("svaštojed")) {
+                    foodText = "Ova ptica je:\n\(foodDesc)."
+                }
+                else {
+                    foodText = "Glavna hrana ove ptice su:\n\(foodDesc)."
+                }
+                
+                self.foodLabel.text = foodText
+                
+                let notEndangered = ($0?.ugrozena == "NE")
+                
+                self.endangeredLabel.isHidden = notEndangered
+                self.endangeredImageView.isHidden = notEndangered
+                self.endangeredImageHeight.constant = notEndangered ? 0 : 40
+                self.endangeredBottom.constant = notEndangered ? 0 : 30
+                
             }).disposed(by: bag)
         
         let output = viewModel.transform(input: nil)

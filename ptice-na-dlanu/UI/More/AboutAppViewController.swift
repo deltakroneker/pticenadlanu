@@ -24,6 +24,10 @@ class AboutAppViewController: UIViewController, Storyboarded {
     @IBOutlet weak var shareLabel: UILabel!
     @IBOutlet weak var rateLabel: UILabel!
     
+    @IBOutlet var likeStackView: UIStackView!
+    @IBOutlet var shareStackView: UIStackView!
+    @IBOutlet var rateStackView: UIStackView!
+    
     // MARK: - Vars & Lets
     
     weak var coordinator: AppCoordinator?
@@ -68,9 +72,9 @@ class AboutAppViewController: UIViewController, Storyboarded {
         let shareTap = UITapGestureRecognizer()
         let rateTap = UITapGestureRecognizer()
 
-        likeLabel.addGestureRecognizer(likeTap)
-        shareLabel.addGestureRecognizer(shareTap)
-        rateLabel.addGestureRecognizer(rateTap)
+        likeStackView.addGestureRecognizer(likeTap)
+        shareStackView.addGestureRecognizer(shareTap)
+        rateStackView.addGestureRecognizer(rateTap)
                 
         likeTap.rx.event
             .subscribe(onNext: { _ in
@@ -90,7 +94,7 @@ class AboutAppViewController: UIViewController, Storyboarded {
     }
     
     fileprivate func shareAppLink() {
-        let text = "URL aplikacije"
+        let text = "URL aplikacije" // TODO: change before release
         let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = shareLabel
         activityViewController.popoverPresentationController?.sourceRect = shareLabel.frame
