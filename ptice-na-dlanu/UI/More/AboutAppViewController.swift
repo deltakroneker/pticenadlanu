@@ -78,26 +78,37 @@ class AboutAppViewController: UIViewController, Storyboarded {
                 
         likeTap.rx.event
             .subscribe(onNext: { _ in
-                guard let url = URL(string: "https://www.facebook.com/pticenadlanu/") else { return }
-                UIApplication.shared.open(url)
+                DispatchQueue.main.async {
+                    guard let url = URL(string: "https://www.facebook.com/pticenadlanu/") else { return }
+                    UIApplication.shared.open(url)
+                }
             }).disposed(by: bag)
         
         shareTap.rx.event
             .subscribe(onNext: { _ in
-                self.shareAppLink()
+                DispatchQueue.main.async {
+                    self.shareAppLink()
+                }
             }).disposed(by: bag)
         
         rateTap.rx.event
             .subscribe(onNext: { _ in
-                SKStoreReviewController.requestReview()
+                DispatchQueue.main.async {
+                    SKStoreReviewController.requestReview()
+                }
             }).disposed(by: bag)
     }
     
     fileprivate func shareAppLink() {
-        let text = "URL aplikacije" // TODO: change before release
-        let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = shareLabel
-        activityViewController.popoverPresentationController?.sourceRect = shareLabel.frame
-        self.present(activityViewController, animated: true, completion: nil)
+        let appleID = "1483736814"
+        let appText = "Preuzmite aplikaciju Ptice na dlanu"
+        
+        if let appLink = URL(string: "https://itunes.apple.com/us/app/myapp/id\(appleID)?ls=1&mt=8"), !appLink.absoluteString.isEmpty {
+            
+            let activityViewController = UIActivityViewController(activityItems: [appLink, appText], applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = shareLabel
+            activityViewController.popoverPresentationController?.sourceRect = shareLabel.frame
+            self.present(activityViewController, animated: true, completion: nil)
+        }
     }
 }
