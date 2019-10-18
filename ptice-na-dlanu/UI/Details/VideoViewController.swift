@@ -13,11 +13,40 @@ class VideoViewController: UIViewController {
 
     @IBOutlet var myWebView: WKWebView!
     
+    @IBOutlet var indicatorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        let myURL = URL.init(string: "https://www.youtube.com/embed/kmhDEns3lzs")!
+        let myURL = URL.init(string: "https://www.youtube.com/embed/kmhDEns3lzs?rel=0")!
         let myURLRequest = URLRequest.init(url: myURL)
+        myWebView.navigationDelegate = self
+        
         myWebView.load(myURLRequest)
+    }
+}
+
+// TODO: empty states design
+
+// MARK: - WKNavigationDelegate
+
+extension VideoViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        indicatorLabel.isHidden = true
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        indicatorLabel.text = "proverite konekciju i pokušajte kasnije..."
+        indicatorLabel.isHidden = false
+    }
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        indicatorLabel.text = "proverite konekciju i pokušajte kasnije..."
+        indicatorLabel.isHidden = false
+    }
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        indicatorLabel.text = "Video se učitava..."
+        indicatorLabel.isHidden = false
     }
 }

@@ -35,6 +35,8 @@ class DetailsViewController: UIViewController, Storyboarded {
     @IBOutlet var endangeredImageHeight: NSLayoutConstraint!
     @IBOutlet var endangeredBottom: NSLayoutConstraint!
     
+    @IBOutlet var videoButton: UIButton!
+    
     // MARK: - Vars & Lets
     
     weak var coordinator: AppCoordinator?
@@ -110,6 +112,7 @@ class DetailsViewController: UIViewController, Storyboarded {
                 self.endangeredImageHeight.constant = notEndangered ? 0 : 40
                 self.endangeredBottom.constant = notEndangered ? 0 : 30
                 
+                self.videoButton.isHidden = ($0?.video ?? "") == ""
             }).disposed(by: bag)
         
         let output = viewModel.transform(input: nil)
