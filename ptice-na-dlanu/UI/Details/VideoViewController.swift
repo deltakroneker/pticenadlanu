@@ -14,6 +14,10 @@ class VideoViewController: UIViewController, Storyboarded {
     // MARK: - Outlets
     @IBOutlet var myWebView: WKWebView!
     @IBOutlet var indicatorLabel: UILabel!
+    @IBOutlet var detailsLabel: UILabel!
+    @IBOutlet var videoIcon: UIImageView!
+    @IBOutlet var lineIcon: UIImageView!
+    @IBOutlet var birdIcon: UIImageView!
     
     // MARK: - Vars & lets
     weak var coordinator: AppCoordinator?
@@ -22,6 +26,7 @@ class VideoViewController: UIViewController, Storyboarded {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupInitialEmptyState()
                 
         let myURL = URL.init(string: videoURL + "?rel=0")!
         let myURLRequest = URLRequest.init(url: myURL)
@@ -29,29 +34,52 @@ class VideoViewController: UIViewController, Storyboarded {
         
         myWebView.load(myURLRequest)
     }
+    
+    // MARK: - Helpers
+    
+    fileprivate func setupInitialEmptyState() {
+        indicatorLabel.text = "Video se učitava..."
+        indicatorLabel.isHidden = false
+        detailsLabel.isHidden = true
+        videoIcon.image = videoIcon.image?.withRenderingMode(.alwaysTemplate)
+        videoIcon.tintColor = UIColor(named: "colorPrimaryLight")
+        videoIcon.isHidden = false
+        lineIcon.isHidden = true
+        birdIcon.isHidden = false
+    }
+    
+    fileprivate func setupErrorState() {
+        indicatorLabel.text = "Video nije moguće učitati"
+        indicatorLabel.isHidden = false
+        detailsLabel.isHidden = false
+        videoIcon.image = videoIcon.image?.withRenderingMode(.alwaysTemplate)
+        videoIcon.tintColor = UIColor(named: "darkGray")
+        videoIcon.isHidden = false
+        lineIcon.isHidden = false
+        birdIcon.isHidden = true
+    }
+    
+    fileprivate func hideAll() {
+        indicatorLabel.isHidden = true
+        detailsLabel.isHidden = true
+        videoIcon.isHidden = true
+        lineIcon.isHidden = true
+        birdIcon.isHidden = true
+    }
 }
-
-// TODO: empty states design
 
 // MARK: - WKNavigationDelegate
 
 extension VideoViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        indicatorLabel.isHidden = true
+        hideAll()
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        indicatorLabel.text = "proverite konekciju i pokušajte kasnije..."
-        indicatorLabel.isHidden = false
+        setupErrorState()
     }
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        indicatorLabel.text = "proverite konekciju i pokušajte kasnije..."
-        indicatorLabel.isHidden = false
-    }
-    
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        indicatorLabel.text = "Video se učitava..."
-        indicatorLabel.isHidden = false
+        setupErrorState()
     }
 }
