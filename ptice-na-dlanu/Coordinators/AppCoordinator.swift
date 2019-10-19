@@ -72,4 +72,11 @@ extension AppCoordinator {
         vc.title = "O nama - DZPPS"
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func videoButtonPressed(_ link: String) {
+        let vc = VideoViewController.instantiate(from: .details)
+        vc.coordinator = self
+        vc.videoURL = link
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

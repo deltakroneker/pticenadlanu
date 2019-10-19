@@ -9,16 +9,21 @@
 import UIKit
 import WebKit
 
-class VideoViewController: UIViewController {
+class VideoViewController: UIViewController, Storyboarded {
 
+    // MARK: - Outlets
     @IBOutlet var myWebView: WKWebView!
-    
     @IBOutlet var indicatorLabel: UILabel!
     
+    // MARK: - Vars & lets
+    weak var coordinator: AppCoordinator?
+    var videoURL = ""
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        let myURL = URL.init(string: "https://www.youtube.com/embed/kmhDEns3lzs?rel=0")!
+        let myURL = URL.init(string: videoURL + "?rel=0")!
         let myURLRequest = URLRequest.init(url: myURL)
         myWebView.navigationDelegate = self
         
