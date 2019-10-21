@@ -17,7 +17,6 @@ class VideoViewController: UIViewController, Storyboarded {
     @IBOutlet var detailsLabel: UILabel!
     @IBOutlet var videoIcon: UIImageView!
     @IBOutlet var lineIcon: UIImageView!
-    @IBOutlet var birdIcon: UIImageView!
     
     // MARK: - Vars & lets
     weak var coordinator: AppCoordinator?
@@ -42,10 +41,9 @@ class VideoViewController: UIViewController, Storyboarded {
         indicatorLabel.isHidden = false
         detailsLabel.isHidden = true
         videoIcon.image = videoIcon.image?.withRenderingMode(.alwaysTemplate)
-        videoIcon.tintColor = UIColor(named: "colorPrimaryLight")
+        videoIcon.tintColor = UIColor(named: "darkGray")
         videoIcon.isHidden = false
         lineIcon.isHidden = true
-        birdIcon.isHidden = false
     }
     
     fileprivate func setupErrorState() {
@@ -56,7 +54,6 @@ class VideoViewController: UIViewController, Storyboarded {
         videoIcon.tintColor = UIColor(named: "darkGray")
         videoIcon.isHidden = false
         lineIcon.isHidden = false
-        birdIcon.isHidden = true
     }
     
     fileprivate func hideAll() {
@@ -64,7 +61,6 @@ class VideoViewController: UIViewController, Storyboarded {
         detailsLabel.isHidden = true
         videoIcon.isHidden = true
         lineIcon.isHidden = true
-        birdIcon.isHidden = true
     }
 }
 
