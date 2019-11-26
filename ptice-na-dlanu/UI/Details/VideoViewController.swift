@@ -17,6 +17,7 @@ class VideoViewController: UIViewController, Storyboarded {
     @IBOutlet var detailsLabel: UILabel!
     @IBOutlet var videoIcon: UIImageView!
     @IBOutlet var lineIcon: UIImageView!
+    @IBOutlet var replayButton: UIBarButtonItem!
     
     // MARK: - Vars & lets
     weak var coordinator: AppCoordinator?
@@ -44,6 +45,8 @@ class VideoViewController: UIViewController, Storyboarded {
         videoIcon.tintColor = UIColor(named: "darkGray")
         videoIcon.isHidden = false
         lineIcon.isHidden = true
+        replayButton.isEnabled = false
+        myWebView.isHidden = true
     }
     
     fileprivate func setupErrorState() {
@@ -54,13 +57,22 @@ class VideoViewController: UIViewController, Storyboarded {
         videoIcon.tintColor = UIColor(named: "darkGray")
         videoIcon.isHidden = false
         lineIcon.isHidden = false
+        replayButton.isEnabled = true
+        myWebView.isHidden = true
     }
     
-    fileprivate func hideAll() {
+    fileprivate func setUpSuccessState() {
         indicatorLabel.isHidden = true
         detailsLabel.isHidden = true
         videoIcon.isHidden = true
         lineIcon.isHidden = true
+        replayButton.isEnabled = true
+        myWebView.isHidden = false
+    }
+    
+    @IBAction func replayTapped(_ sender: UIBarButtonItem) {
+        replayButton.isEnabled = false
+        myWebView.reload()
     }
 }
 
@@ -68,7 +80,7 @@ class VideoViewController: UIViewController, Storyboarded {
 
 extension VideoViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        hideAll()
+        setUpSuccessState()
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -438,12 +438,19 @@ pokusajte opet, ili nas kontaktirajte.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b9r-7c-ntU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="w3A-g5-nPS"/>
+                    <navigationItem key="navigationItem" id="w3A-g5-nPS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="RB6-XM-rQ1">
+                            <connections>
+                                <action selector="replayTapped:" destination="JfA-dq-QJe" id="yEc-rz-sDC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="detailsLabel" destination="gUM-YU-nW8" id="TYA-Q0-PHa"/>
                         <outlet property="indicatorLabel" destination="aCB-23-rL9" id="TFj-Gp-7FW"/>
                         <outlet property="lineIcon" destination="WTd-01-tU8" id="HU6-G0-ssi"/>
                         <outlet property="myWebView" destination="rh1-XG-zbO" id="mg1-am-Jti"/>
+                        <outlet property="replayButton" destination="RB6-XM-rQ1" id="dQn-WJ-OUi"/>
                         <outlet property="videoIcon" destination="DrF-df-fse" id="Pcu-Ka-VAU"/>
                     </connections>
                 </viewController>
