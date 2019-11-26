@@ -35,11 +35,15 @@ class DetailsViewController: UIViewController, Storyboarded {
     @IBOutlet var endangeredImageHeight: NSLayoutConstraint!
     @IBOutlet var endangeredBottom: NSLayoutConstraint!
     
+    @IBOutlet var videoButton: UIButton!
+    
     // MARK: - Vars & Lets
     
     weak var coordinator: AppCoordinator?
     var viewModel: DetailsViewModel!
     let bag = DisposeBag()
+    
+    var videoLink = ""
         
     let regularImage: CGFloat = 250
     let smallerImage: CGFloat = 210
@@ -110,6 +114,8 @@ class DetailsViewController: UIViewController, Storyboarded {
                 self.endangeredImageHeight.constant = notEndangered ? 0 : 40
                 self.endangeredBottom.constant = notEndangered ? 0 : 30
                 
+                self.videoLink = $0?.video ?? ""
+                self.videoButton.isHidden = self.videoLink == ""
             }).disposed(by: bag)
         
         let output = viewModel.transform(input: nil)
@@ -121,6 +127,12 @@ class DetailsViewController: UIViewController, Storyboarded {
         output.imagesData
             .bind(to: imageCollectionView.rx.items(dataSource: imagesDataSource))
             .disposed(by: bag)
+        
+        videoButton.rx.tap
+        .subscribe(onNext: { [weak self] in
+            guard let self = self else { return }
+            self.coordinator?.videoButtonPressed(self.videoLink)
+        }).disposed(by: bag)
     }
 }
 

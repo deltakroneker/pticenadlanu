@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7712C1922358F79C003B2408 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7712C1912358F79C003B2408 /* VideoViewController.swift */; };
+		7712C1942358F8C9003B2408 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7712C1932358F8C9003B2408 /* WebKit.framework */; };
 		D202E03D225DF0E500F6CE57 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202E03C225DF0E500F6CE57 /* Shape.swift */; };
 		D202E040225E002300F6CE57 /* ImageWithTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202E03F225E002300F6CE57 /* ImageWithTitleCell.swift */; };
 		D202E042225E070200F6CE57 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202E041225E070200F6CE57 /* Location.swift */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		2439F4130064B5FA5ABA73A5 /* Pods-ptice-na-dlanu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ptice-na-dlanu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ptice-na-dlanu/Pods-ptice-na-dlanu.debug.xcconfig"; sourceTree = "<group>"; };
 		756771D2E459B5E00BBE93E9 /* Pods_ptice_na_dlanu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ptice_na_dlanu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7712C1912358F79C003B2408 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		7712C1932358F8C9003B2408 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D202E03C225DF0E500F6CE57 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		D202E03F225E002300F6CE57 /* ImageWithTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithTitleCell.swift; sourceTree = "<group>"; };
 		D202E041225E070200F6CE57 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7712C1942358F8C9003B2408 /* WebKit.framework in Frameworks */,
 				ECB25ACA9787D6E2F69AFA13 /* Pods_ptice_na_dlanu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +108,7 @@
 		896E0940AF5771FA97E1FDE5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7712C1932358F8C9003B2408 /* WebKit.framework */,
 				756771D2E459B5E00BBE93E9 /* Pods_ptice_na_dlanu.framework */,
 			);
 			name = Frameworks;
@@ -192,6 +198,7 @@
 				D2A296E522DCD35100F17B2D /* Details.storyboard */,
 				D2A296E922DCD3DE00F17B2D /* DetailsViewController.swift */,
 				D2A296EB22DCDA0100F17B2D /* DetailsViewModel.swift */,
+				7712C1912358F79C003B2408 /* VideoViewController.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -398,6 +405,7 @@
 				D2A833C522DF5B6300F33C53 /* ImageCell.swift in Sources */,
 				D2B2CA502268DA1C00DED1E2 /* ItemGradientLayer.swift in Sources */,
 				D205DBCB22DB4B2B00D46079 /* Item.swift in Sources */,
+				7712C1922358F79C003B2408 /* VideoViewController.swift in Sources */,
 				D206CCE82280870500CF38E5 /* Bird.swift in Sources */,
 				D205DBC422DB3C5700D46079 /* ListViewModel.swift in Sources */,
 				D202E040225E002300F6CE57 /* ImageWithTitleCell.swift in Sources */,
@@ -560,14 +568,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2CY8VW2PF4;
+				DEVELOPMENT_TEAM = NLHXMY5PBX;
 				INFOPLIST_FILE = "$(SRCROOT)/ptice-na-dlanu/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nikolamilic.ptice-na-dlanu";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.birdlifeserbia.pticenadlanu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -580,14 +589,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2CY8VW2PF4;
+				DEVELOPMENT_TEAM = NLHXMY5PBX;
 				INFOPLIST_FILE = "$(SRCROOT)/ptice-na-dlanu/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nikolamilic.ptice-na-dlanu";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.birdlifeserbia.pticenadlanu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

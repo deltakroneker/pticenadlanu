@@ -15,7 +15,7 @@ struct Bird: Codable {
     let boje, bojeZenke: String
     let glavniTekst: String
     let duzinaTela, rasponKrila, masa, ishrana: String
-    let gnezdaricaNegnezdarica, the1, ugrozena: String
+    let gnezdaricaNegnezdarica, the1, ugrozena, video: String
     
     var shapeArray: [BirdShape] {
         return silueta.components(separatedBy: ";").compactMap {
@@ -61,6 +61,7 @@ struct Bird: Codable {
         case gnezdaricaNegnezdarica   = "Gnezdarica/Negnezdarica"
         case the1                     = "__1"
         case ugrozena                 = "Ugrožena (DA/NE)"
+        case video                    = "Video"
     }
 }
 
