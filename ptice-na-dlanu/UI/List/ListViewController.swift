@@ -70,6 +70,7 @@ class ListViewController: UIViewController, Storyboarded {
             }
             .subscribe(onNext: { [weak self] in
                 guard let self = self, let item = $0 else { return }
+                self.searchBar.resignFirstResponder()
                 self.coordinator?.birdItemPressed(item: item)
             }).disposed(by: bag)
     }
