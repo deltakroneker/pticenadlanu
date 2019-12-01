@@ -568,6 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = NLHXMY5PBX;
 				INFOPLIST_FILE = "$(SRCROOT)/ptice-na-dlanu/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -589,6 +590,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = NLHXMY5PBX;
 				INFOPLIST_FILE = "$(SRCROOT)/ptice-na-dlanu/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
