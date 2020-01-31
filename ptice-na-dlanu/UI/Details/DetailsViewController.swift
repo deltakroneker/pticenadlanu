@@ -93,7 +93,7 @@ class DetailsViewController: UIViewController, Storyboarded {
                 self.wingSpanLabel.text = ($0?.rasponKrila ?? "-") + " cm"
                 self.weightLabel.text = ($0?.masa ?? "-") + " g"
                 self.descriptionLabel.text = $0?.glavniTekst
-                self.nestLabel.text = ($0?.gnezdaricaNegnezdarica ?? "") + " " + ($0?.the1 ?? "")
+                self.nestLabel.text = ($0?.gnezdaricaNegnezdarica ?? "") + " " + ($0?.prisutnost ?? "")
                 
                 let foodDesc = $0?.ishrana ?? ""
                 var foodText = ""

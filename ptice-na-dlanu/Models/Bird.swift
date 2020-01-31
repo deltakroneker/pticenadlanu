@@ -15,7 +15,7 @@ struct Bird: Codable {
     let boje, bojeZenke: String
     let glavniTekst: String
     let duzinaTela, rasponKrila, masa, ishrana: String
-    let gnezdaricaNegnezdarica, the1, ugrozena, video: String
+    let gnezdaricaNegnezdarica, prisutnost, ugrozena, video: String
     let pesma, pesmaZenke, zov, letniZov, zovUzbune, zovMladih, brojZvukova: String
     
     var shapeArray: [BirdShape] {
@@ -60,7 +60,7 @@ struct Bird: Codable {
         case masa                     = "Masa (g)"
         case ishrana                  = "Ishrana"
         case gnezdaricaNegnezdarica   = "Gnezdarica/Negnezdarica"
-        case the1                     = "__1"
+        case prisutnost               = "Prisutnost"
         case ugrozena                 = "Ugrožena (DA/NE)"
         case video                    = "Video"
         case pesma                    = "Pesma"
