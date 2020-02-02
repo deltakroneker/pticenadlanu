@@ -39,7 +39,8 @@ class ListViewModel {
         let foundInSrpskiNazivVrste = bird.srpskiNazivVrste.range(of: text, options: [.caseInsensitive, .diacriticInsensitive]) != nil
         let foundInPorodica = bird.srpskiNazivVrste.range(of: text, options: [.caseInsensitive, .diacriticInsensitive]) != nil
         let foundInNaucniNazivVrste = bird.naucniNazivVrste.range(of: text, options: [.caseInsensitive, .diacriticInsensitive]) != nil
+        let foundInSinonimi = bird.sinonimi.range(of: text, options: [.caseInsensitive, .diacriticInsensitive]) != nil
 
-        return foundInSrpskiNazivVrste || foundInPorodica || foundInNaucniNazivVrste
+        return foundInSrpskiNazivVrste || foundInPorodica || foundInNaucniNazivVrste || foundInSinonimi
     }
 }

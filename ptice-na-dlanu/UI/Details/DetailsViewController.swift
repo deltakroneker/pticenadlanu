@@ -20,6 +20,8 @@ class DetailsViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var speciesNameLabel: UILabel!
     @IBOutlet weak var familyNameLabel: UILabel!
+    @IBOutlet weak var synonymLabel: UILabel!
+    @IBOutlet weak var synonymTitleLabel: UILabel!
     
     @IBOutlet weak var birdLengthLabel: UILabel!
     @IBOutlet weak var wingSpanLabel: UILabel!
@@ -89,6 +91,12 @@ class DetailsViewController: UIViewController, Storyboarded {
                                                              attributes: [NSAttributedString.Key.font: UIFont(name: "OpenSans-Italic", size: 15)!]))
                 self.speciesNameLabel.attributedText = speciesName
                 self.familyNameLabel.text = $0?.porodica
+                
+                let hasSynonims = $0?.sinonimi == ""
+                self.synonymTitleLabel.isHidden = hasSynonims
+                self.synonymLabel.isHidden = hasSynonims
+                self.synonymLabel.text = $0?.sinonimi
+                
                 self.birdLengthLabel.text = ($0?.duzinaTela ?? "-") + " cm"
                 self.wingSpanLabel.text = ($0?.rasponKrila ?? "-") + " cm"
                 self.weightLabel.text = ($0?.masa ?? "-") + " g"
