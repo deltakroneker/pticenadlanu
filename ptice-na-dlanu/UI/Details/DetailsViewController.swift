@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import AVFoundation
 
 class DetailsViewController: UIViewController, Storyboarded {
     
@@ -38,6 +39,9 @@ class DetailsViewController: UIViewController, Storyboarded {
     @IBOutlet var endangeredBottom: NSLayoutConstraint!
     
     @IBOutlet var videoButton: UIButton!
+    @IBOutlet weak var audioButton: UIButton!
+    @IBOutlet weak var audioStackView: UIStackView!
+    @IBOutlet var audioTypeButtons: [UIButton]!
     
     // MARK: - Vars & Lets
     
@@ -45,8 +49,15 @@ class DetailsViewController: UIViewController, Storyboarded {
     var viewModel: DetailsViewModel!
     let bag = DisposeBag()
     
+    private var playerItemContext = 0
     var videoLink = ""
-        
+    var audioPlayer: AVPlayer? {
+        didSet {
+            NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying),
+                                                   name: Notification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+        }
+    }
+    
     let regularImage: CGFloat = 250
     let smallerImage: CGFloat = 210
     let largerImage: CGFloat = 350
@@ -65,6 +76,10 @@ class DetailsViewController: UIViewController, Storyboarded {
         imageCollectionView.delegate = self
         tweakImageSize()
         setupBindings()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - Methods
@@ -124,6 +139,45 @@ class DetailsViewController: UIViewController, Storyboarded {
                 
                 self.videoLink = $0?.video ?? ""
                 self.videoButton.isHidden = self.videoLink == ""
+                self.audioButton.isHidden = ($0?.brojZvukova ?? "0") == "0"
+                
+                let birdObj = $0
+                self.audioTypeButtons.forEach { [weak self] button in
+                    guard let self = self else { return }
+                    switch (button.tag) {
+                    case 0: button.isHidden = birdObj?.pesma == ""; break
+                    case 1: button.isHidden = birdObj?.zov == ""; break
+                    case 2: button.isHidden = birdObj?.pesmaZenke == ""; break
+                    case 3: button.isHidden = birdObj?.zovMladih == ""; break
+                    case 4: button.isHidden = birdObj?.letniZov == ""; break
+                    case 5: button.isHidden = birdObj?.zovUzbune == ""; break
+                    default: break
+                    }
+                    button.rx.tap.subscribe(onNext: { [weak self] tap in
+                        guard let self = self else { return }
+                        var url: URL?
+                        switch (button.tag) {
+                        case 0: url = URL(string: (birdObj?.pesma ?? "") + "/download"); break
+                        case 1: url = URL(string: (birdObj?.zov ?? "") + "/download"); break
+                        case 2: url = URL(string: (birdObj?.pesmaZenke ?? "") + "/download"); break
+                        case 3: url = URL(string: (birdObj?.zovMladih ?? "") + "/download"); break
+                        case 4: url = URL(string: (birdObj?.letniZov ?? "") + "/download"); break
+                        case 5: url = URL(string: (birdObj?.zovUzbune ?? "") + "/download"); break
+                        default: break
+                        }
+                        self.audioStackView.isHidden.toggle()
+                        guard let link = url else { return }
+                        self.audioPlayer = AVPlayer(url: link)
+                        guard let player = self.audioPlayer else { return }
+                        player.currentItem?.addObserver(self,
+                                                        forKeyPath: #keyPath(AVPlayerItem.status),
+                                                        options: [.old, .new],
+                                                        context: &self.playerItemContext)
+                        player.actionAtItemEnd = .pause
+                        player.play()
+                        self.audioButton.setImage(UIImage(named: "audio_loading"), for: .normal)
+                    }).disposed(by: self.bag)
+                }
             }).disposed(by: bag)
         
         let output = viewModel.transform(input: nil)
@@ -141,10 +195,31 @@ class DetailsViewController: UIViewController, Storyboarded {
             .disposed(by: bag)
         
         videoButton.rx.tap
-        .subscribe(onNext: { [weak self] in
-            guard let self = self else { return }
-            self.coordinator?.videoButtonPressed(self.videoLink)
-        }).disposed(by: bag)
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+                self.coordinator?.videoButtonPressed(self.videoLink)
+            }).disposed(by: bag)
+        
+        audioButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+                guard let player = self.audioPlayer else {
+                    self.audioStackView.isHidden.toggle()
+                    return
+                }
+                if player.rate > 0 {
+                    player.pause()
+                    self.audioButton.setImage(UIImage(named: "audio_start"), for: .normal)
+                } else {
+                    self.audioStackView.isHidden.toggle()
+                }
+            }).disposed(by: bag)
+    }
+    
+    @objc func playerDidFinishPlaying() {
+        DispatchQueue.main.async {
+            self.audioButton.setImage(UIImage(named: "audio_start"), for: .normal)
+        }
     }
 }
 
@@ -178,5 +253,44 @@ extension DetailsViewController: UICollectionViewDelegateFlowLayout {
         let width = scrollView.frame.width
         let horizontalCenter = width / 2
         imagePageControl.currentPage = Int(offSet + horizontalCenter) / Int(width)
+    }
+}
+
+extension DetailsViewController {
+    
+    // Taken from: https://developer.apple.com/documentation/avfoundation/media_assets_playback_and_editing/responding_to_playback_state_changes
+    override func observeValue(forKeyPath keyPath: String?,
+                               of object: Any?,
+                               change: [NSKeyValueChangeKey : Any]?,
+                               context: UnsafeMutableRawPointer?) {
+
+        // Only handle observations for the playerItemContext
+        guard context == &playerItemContext else {
+            super.observeValue(forKeyPath: keyPath,
+                               of: object,
+                               change: change,
+                               context: context)
+            return
+        }
+
+        if keyPath == #keyPath(AVPlayerItem.status) {
+            let status: AVPlayerItem.Status
+            if let statusNumber = change?[.newKey] as? NSNumber {
+                status = AVPlayerItem.Status(rawValue: statusNumber.intValue)!
+            } else {
+                status = .unknown
+            }
+
+            // Switch over status value
+            switch status {
+            case .readyToPlay:
+                self.audioButton.setImage(UIImage(named: "audio_stop"), for: .normal)
+            case .failed:
+                self.audioButton.setImage(UIImage(named: "audio_start"), for: .normal)
+            case .unknown:
+                self.audioButton.setImage(UIImage(named: "audio_start"), for: .normal)
+            default: break
+            }
+        }
     }
 }
