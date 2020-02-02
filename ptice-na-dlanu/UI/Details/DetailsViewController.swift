@@ -124,6 +124,10 @@ class DetailsViewController: UIViewController, Storyboarded {
             .bind(to: imagePageControl.rx.isHidden)
             .disposed(by: bag)
         
+        output.numberOfPages
+            .bind(to: imagePageControl.rx.numberOfPages)
+            .disposed(by: bag)
+        
         output.imagesData
             .bind(to: imageCollectionView.rx.items(dataSource: imagesDataSource))
             .disposed(by: bag)

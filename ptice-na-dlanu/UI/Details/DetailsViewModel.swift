@@ -21,6 +21,7 @@ class DetailsViewModel {
     struct Output {
         let imagesData: Observable<[SectionModel<String, String>]>
         let isPageControlHidden: Observable<Bool>
+        let numberOfPages: Observable<Int>
     }
     
     func transform(input: Input?) -> Output {
@@ -33,7 +34,11 @@ class DetailsViewModel {
         let isPageControlHidden = images
             .map { $0.count == 1 }
         
+        let numberOfPages = images
+            .map { $0.count }
+        
         return Output(imagesData: imageDataSource,
-                      isPageControlHidden: isPageControlHidden)
+                      isPageControlHidden: isPageControlHidden,
+                      numberOfPages: numberOfPages)
     }
 }
