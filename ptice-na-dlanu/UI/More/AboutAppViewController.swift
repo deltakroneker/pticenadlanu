@@ -28,6 +28,9 @@ class AboutAppViewController: UIViewController, Storyboarded {
     @IBOutlet var shareStackView: UIStackView!
     @IBOutlet var rateStackView: UIStackView!
     
+    @IBOutlet var xenoCantoButton: UIButton!
+    @IBOutlet var authorsButton: UIButton!
+    
     // MARK: - Vars & Lets
     
     weak var coordinator: AppCoordinator?
@@ -96,6 +99,20 @@ class AboutAppViewController: UIViewController, Storyboarded {
                 DispatchQueue.main.async {
                     SKStoreReviewController.requestReview()
                 }
+            }).disposed(by: bag)
+        
+        xenoCantoButton.rx.tap
+            .subscribe(onNext: { _ in
+                DispatchQueue.main.async {
+                    guard let url = URL(string: "https://www.xeno-canto.org/") else { return }
+                    UIApplication.shared.open(url)
+                }
+            }).disposed(by: bag)
+        
+        authorsButton.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.coordinator?.authorsButtonPressed()
             }).disposed(by: bag)
     }
     

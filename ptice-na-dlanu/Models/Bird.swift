@@ -17,6 +17,7 @@ struct Bird: Codable {
     let duzinaTela, rasponKrila, masa, ishrana: String
     let gnezdaricaNegnezdarica, prisutnost, ugrozena, video: String
     let pesma, pesmaZenke, zov, letniZov, zovUzbune, zovMladih, brojZvukova: String
+    let autorPesme, autorPesmeZenke, autorZova, autorLetnogZova, autorZovaUzbune, autorZovaMladih: String
     
     var shapeArray: [BirdShape] {
         return silueta.components(separatedBy: ";").compactMap {
@@ -70,6 +71,12 @@ struct Bird: Codable {
         case zovUzbune                = "Uzbuna"
         case zovMladih                = "Mladi"
         case brojZvukova              = "Broj zvukova"
+        case autorPesme               = "Autor - pesma"
+        case autorPesmeZenke          = "Autor - zov zenke"
+        case autorZova                = "Autor - zov"
+        case autorLetnogZova          = "Autor  - let"
+        case autorZovaUzbune          = "Autor - uzbuna"
+        case autorZovaMladih          = "Autor - zov mladih"
     }
 }
 

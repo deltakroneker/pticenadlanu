@@ -76,6 +76,9 @@ class DetailsViewController: UIViewController, Storyboarded {
         imageCollectionView.delegate = self
         tweakImageSize()
         setupBindings()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(appWentToBackground),
+                                               name: UIApplication.willResignActiveNotification, object: nil)
     }
     
     deinit {
@@ -93,6 +96,14 @@ class DetailsViewController: UIViewController, Storyboarded {
         }
         else {
             collectionViewHeight.constant = largerImage // iPads
+        }
+    }
+    
+    @objc fileprivate func appWentToBackground() {
+        DispatchQueue.main.async {
+            self.audioPlayer?.rate = 0.0
+            self.audioPlayer?.pause()
+            self.audioButton.setImage(UIImage(named: "audio_start"), for: .normal)
         }
     }
     
@@ -286,11 +297,31 @@ extension DetailsViewController {
             case .readyToPlay:
                 self.audioButton.setImage(UIImage(named: "audio_stop"), for: .normal)
             case .failed:
+                self.showToast(message: "Zvuk nije moguće učitati.", width: 220)
                 self.audioButton.setImage(UIImage(named: "audio_start"), for: .normal)
             case .unknown:
                 self.audioButton.setImage(UIImage(named: "audio_start"), for: .normal)
             default: break
             }
         }
+    }
+    
+    func showToast(message : String, width: CGFloat) {
+
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - width/2, y: self.view.frame.size.height-80, width: width, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        
+        UIView.animate(withDuration: 3.0, delay: 0.2, options: .curveEaseOut, animations: {
+             toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
     }
 }

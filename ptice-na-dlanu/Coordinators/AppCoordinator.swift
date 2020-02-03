@@ -79,4 +79,11 @@ extension AppCoordinator {
         vc.videoURL = link
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func authorsButtonPressed() {
+        let vc = AuthorsViewController.instantiate(from: .about)
+        vc.coordinator = self
+        vc.title = "Zvukovi ptica u aplikaciji"
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
