@@ -39,7 +39,7 @@ extension AppCoordinator {
         vc.coordinator = self
         vc.viewModel = ListViewModel()
         vc.viewModel.matchedBirds.accept(birds)
-        vc.title = title
+        vc.title = title.lowercased()
         navigationController.pushViewController(vc, animated: true)
     }
     
