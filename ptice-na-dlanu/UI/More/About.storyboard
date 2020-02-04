@@ -9,9 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="OpenSans-Bold.ttf">
-            <string>OpenSans-Bold</string>
-        </array>
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans-Regular</string>
         </array>
@@ -85,7 +82,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="922"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXu-fC-ugz">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="875"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Videli ste pticu, a ne znate kojoj vrsti pripada?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5i-52-T9l">
                                                 <rect key="frame" x="15" y="15" width="384" height="17.5"/>
@@ -145,7 +142,7 @@
                                                                     <constraint firstAttribute="width" secondItem="fNe-rT-VQg" secondAttribute="height" multiplier="1:1" id="eNl-6b-XBn"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Koje boje joj je bilo perje?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-l8-YWI">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Koje boje je imala na sebi?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-l8-YWI">
                                                                 <rect key="frame" x="12" y="85" width="98" height="30.5"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                                                 <color key="textColor" name="textColor"/>
@@ -198,18 +195,17 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYR-yx-bOm">
-                                                <rect key="frame" x="15" y="522" width="384" height="105"/>
+                                                <rect key="frame" x="15" y="522" width="384" height="87.5"/>
                                                 <string key="text">• Stručni saradnici i urednici informacija o pticama: Draženko Rajković i Uroš Pantović. 
 • Algoritam za prepoznavanje ptica: Saša Rajkov. 
 • Grafički dizajn: Kalman Moldvai. 
-• Tehnički razvoj aplikacije: Jelena Krmar i Nikola Milić.
-• Video snimci ptica: Aleksandar Topalov.</string>
+• Tehnički razvoj aplikacije: Jelena Krmar i Nikola Milić.</string>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YSI-aV-X7I">
-                                                <rect key="frame" x="15" y="727" width="384" height="75.5"/>
+                                                <rect key="frame" x="15" y="749.5" width="384" height="75.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4HU-gD-qb3">
                                                         <rect key="frame" x="0.0" y="0.0" width="124.5" height="75.5"/>
@@ -276,17 +272,24 @@
                                                     <constraint firstItem="MoI-cU-L3A" firstAttribute="width" secondItem="gj5-bK-jeQ" secondAttribute="width" id="nnn-2q-atn"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="I6f-vC-g5x">
-                                                <rect key="frame" x="15" y="637" width="384" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rA-zz-jFt">
+                                                <rect key="frame" x="15" y="689.5" width="254" height="30"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
-                                                <state key="normal" title="Zvuci ptica su preuzeti sa sajta xeno-canto.">
+                                                <state key="normal" title="Spisak autora možete pogledati ovde.">
                                                     <color key="titleColor" name="colorAccent"/>
                                                 </state>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rA-zz-jFt">
-                                                <rect key="frame" x="15" y="667" width="254" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxZ-sq-p90">
+                                                <rect key="frame" x="15" y="619.5" width="384" height="30"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
-                                                <state key="normal" title="Spisak autora možete pogledati ovde.">
+                                                <state key="normal" title="Video snimci ptica: Aleksandar Topalov.">
+                                                    <color key="titleColor" name="colorAccent"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="I6f-vC-g5x">
+                                                <rect key="frame" x="15" y="659.5" width="384" height="30"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                                                <state key="normal" title="Zvuci ptica su preuzeti sa sajta xeno-canto.">
                                                     <color key="titleColor" name="colorAccent"/>
                                                 </state>
                                             </button>
@@ -303,18 +306,19 @@
                                             <constraint firstItem="1bd-0h-TbR" firstAttribute="top" secondItem="MVt-wm-bD6" secondAttribute="bottom" constant="10" id="Aq7-h8-IiA"/>
                                             <constraint firstItem="LF9-rb-wcf" firstAttribute="leading" secondItem="1DW-sM-XGs" secondAttribute="leading" id="EAg-Op-PgB"/>
                                             <constraint firstItem="YSI-aV-X7I" firstAttribute="top" secondItem="6rA-zz-jFt" secondAttribute="bottom" constant="30" id="Gil-rH-JgW"/>
+                                            <constraint firstItem="FxZ-sq-p90" firstAttribute="top" secondItem="RYR-yx-bOm" secondAttribute="bottom" constant="10" id="HWx-G6-osy"/>
                                             <constraint firstItem="a5i-52-T9l" firstAttribute="top" secondItem="PXu-fC-ugz" secondAttribute="top" constant="15" id="IM8-Da-8lZ"/>
                                             <constraint firstItem="MpO-Of-aa9" firstAttribute="leading" secondItem="5rT-eZ-fjX" secondAttribute="leading" id="JjN-8h-AcE"/>
                                             <constraint firstItem="6rA-zz-jFt" firstAttribute="leading" secondItem="I6f-vC-g5x" secondAttribute="leading" id="Km2-Pe-7Qo"/>
                                             <constraint firstItem="1DW-sM-XGs" firstAttribute="trailing" secondItem="MVt-wm-bD6" secondAttribute="trailing" id="N77-fe-OlK"/>
                                             <constraint firstItem="1DW-sM-XGs" firstAttribute="leading" secondItem="MVt-wm-bD6" secondAttribute="leading" id="OG9-qm-6gF"/>
-                                            <constraint firstItem="I6f-vC-g5x" firstAttribute="top" secondItem="RYR-yx-bOm" secondAttribute="bottom" constant="10" id="P3p-Zh-cZa"/>
                                             <constraint firstItem="LF9-rb-wcf" firstAttribute="top" secondItem="1DW-sM-XGs" secondAttribute="bottom" constant="8" id="Q6J-yL-4hb"/>
                                             <constraint firstItem="1DW-sM-XGs" firstAttribute="top" secondItem="1bd-0h-TbR" secondAttribute="bottom" constant="10" id="Ql7-iB-s6O"/>
                                             <constraint firstItem="YSI-aV-X7I" firstAttribute="leading" secondItem="RYR-yx-bOm" secondAttribute="leading" id="R8i-D0-Ygc"/>
                                             <constraint firstItem="oQF-bI-5HJ" firstAttribute="top" secondItem="MpO-Of-aa9" secondAttribute="bottom" constant="30" id="S8X-ys-1xn"/>
                                             <constraint firstItem="MVt-wm-bD6" firstAttribute="top" secondItem="oQF-bI-5HJ" secondAttribute="bottom" constant="20" id="SMl-Zg-sKC"/>
                                             <constraint firstItem="RYR-yx-bOm" firstAttribute="trailing" secondItem="LF9-rb-wcf" secondAttribute="trailing" id="TQJ-um-5mn"/>
+                                            <constraint firstItem="I6f-vC-g5x" firstAttribute="top" secondItem="FxZ-sq-p90" secondAttribute="bottom" constant="10" id="WBb-MT-I30"/>
                                             <constraint firstAttribute="trailing" secondItem="a5i-52-T9l" secondAttribute="trailing" constant="15" id="XYz-HG-qPG"/>
                                             <constraint firstAttribute="bottom" secondItem="YSI-aV-X7I" secondAttribute="bottom" constant="50" id="Yhs-kg-JQK"/>
                                             <constraint firstItem="I6f-vC-g5x" firstAttribute="leading" secondItem="RYR-yx-bOm" secondAttribute="leading" id="ZZH-BN-cpq"/>
@@ -326,7 +330,9 @@
                                             <constraint firstItem="MpO-Of-aa9" firstAttribute="trailing" secondItem="5rT-eZ-fjX" secondAttribute="trailing" id="l4l-Fo-dog"/>
                                             <constraint firstItem="YSI-aV-X7I" firstAttribute="trailing" secondItem="RYR-yx-bOm" secondAttribute="trailing" id="lUz-9k-cpf"/>
                                             <constraint firstItem="MVt-wm-bD6" firstAttribute="trailing" secondItem="oQF-bI-5HJ" secondAttribute="trailing" id="mGH-Vc-bfe"/>
+                                            <constraint firstItem="FxZ-sq-p90" firstAttribute="trailing" secondItem="RYR-yx-bOm" secondAttribute="trailing" id="nNy-cp-nvr"/>
                                             <constraint firstItem="RYR-yx-bOm" firstAttribute="leading" secondItem="LF9-rb-wcf" secondAttribute="leading" id="nOZ-hw-UhZ"/>
+                                            <constraint firstItem="FxZ-sq-p90" firstAttribute="leading" secondItem="RYR-yx-bOm" secondAttribute="leading" id="o2n-5P-J8t"/>
                                             <constraint firstItem="MpO-Of-aa9" firstAttribute="top" secondItem="5rT-eZ-fjX" secondAttribute="bottom" constant="17" id="tWT-gc-yOZ"/>
                                             <constraint firstItem="oQF-bI-5HJ" firstAttribute="leading" secondItem="a5i-52-T9l" secondAttribute="leading" id="z7B-M5-GDQ"/>
                                         </constraints>
@@ -362,6 +368,7 @@
                         <outlet property="shareImageView" destination="MoI-cU-L3A" id="xnY-AC-hf5"/>
                         <outlet property="shareLabel" destination="Cgk-1D-VOP" id="TCC-2y-feO"/>
                         <outlet property="shareStackView" destination="3nV-9F-9la" id="7dz-T8-VeS"/>
+                        <outlet property="videosButton" destination="FxZ-sq-p90" id="eCi-Lq-AdG"/>
                         <outlet property="xenoCantoButton" destination="I6f-vC-g5x" id="J83-LC-Wp3"/>
                     </connections>
                 </viewController>
@@ -637,23 +644,23 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="authorCell" textLabel="Wyr-yB-cS1" detailTextLabel="Ib1-x8-ABK" style="IBUITableViewCellStyleSubtitle" id="uw6-cw-sSm">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="66.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="61.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uw6-cw-sSm" id="7k9-LO-bKu">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="66.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wyr-yB-cS1">
-                                                    <rect key="frame" x="20" y="9" width="35.5" height="22"/>
+                                                    <rect key="frame" x="20" y="8.5" width="31.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans SemiBold" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ib1-x8-ABK">
-                                                    <rect key="frame" x="20" y="34" width="57" height="22"/>
+                                                    <rect key="frame" x="20" y="31.5" width="53.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -661,6 +668,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PnR-eQ-f5H" id="lJl-kY-ETr"/>
+                                    <outlet property="delegate" destination="PnR-eQ-f5H" id="uNa-vJ-bK8"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

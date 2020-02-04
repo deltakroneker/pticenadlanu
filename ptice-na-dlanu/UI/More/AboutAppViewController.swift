@@ -30,6 +30,7 @@ class AboutAppViewController: UIViewController, Storyboarded {
     
     @IBOutlet var xenoCantoButton: UIButton!
     @IBOutlet var authorsButton: UIButton!
+    @IBOutlet var videosButton: UIButton!
     
     // MARK: - Vars & Lets
     
@@ -113,6 +114,14 @@ class AboutAppViewController: UIViewController, Storyboarded {
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
                 self.coordinator?.authorsButtonPressed()
+            }).disposed(by: bag)
+        
+        videosButton.rx.tap
+            .subscribe(onNext: { _ in
+                DispatchQueue.main.async {
+                    guard let url = URL(string: "https://www.youtube.com/user/Kenza432/videos") else { return }
+                    UIApplication.shared.open(url)
+                }
             }).disposed(by: bag)
     }
     
