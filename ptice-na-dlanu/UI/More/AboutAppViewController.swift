@@ -43,6 +43,8 @@ class AboutAppViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         setupController()
         setupBindings()
+        let backButton = UIBarButtonItem(title: " ", style: UIBarButtonItem.Style.plain, target: self, action: nil)
+        navigationItem.backBarButtonItem = backButton
     }
     
     // MARK: - Methods
