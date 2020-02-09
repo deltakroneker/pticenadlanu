@@ -334,10 +334,20 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="KIs-ie-EV2">
-                                                <rect key="frame" x="252" y="273" width="162" height="102"/>
+                                                <rect key="frame" x="222" y="273" width="192" height="114.66666666666669"/>
                                                 <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TkR-hU-Xxx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="192" height="16"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" name="colorPrimaryLight"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
+                                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Izaberite tip oglašavanja:">
+                                                            <color key="titleColor" name="filters"/>
+                                                        </state>
+                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HY2-lg-3aU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="162" height="17"/>
+                                                        <rect key="frame" x="0.0" y="12.666666666666686" width="192" height="17"/>
                                                         <color key="backgroundColor" name="colorPrimaryLight"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="SdZ-9O-Xx1"/>
@@ -349,7 +359,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zuB-91-ZIK">
-                                                        <rect key="frame" x="0.0" y="20.666666666666668" width="162" height="17.000000000000004"/>
+                                                        <rect key="frame" x="0.0" y="38.666666666666664" width="192" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" name="colorPrimaryLight"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
@@ -359,7 +369,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MGj-8z-Qdu">
-                                                        <rect key="frame" x="0.0" y="41.333333333333336" width="162" height="17"/>
+                                                        <rect key="frame" x="0.0" y="58.666666666666657" width="192" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" name="colorPrimaryLight"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
@@ -369,7 +379,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Ps-f9-6EJ">
-                                                        <rect key="frame" x="0.0" y="61.666666666666657" width="162" height="17"/>
+                                                        <rect key="frame" x="0.0" y="78.333333333333329" width="192" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" name="colorPrimaryLight"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
@@ -379,7 +389,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y2L-Qr-9bx">
-                                                        <rect key="frame" x="0.0" y="82.333333333333329" width="162" height="17"/>
+                                                        <rect key="frame" x="0.0" y="98.333333333333329" width="192" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" name="colorPrimaryLight"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
@@ -389,7 +399,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XqD-RN-7d8">
-                                                        <rect key="frame" x="0.0" y="103" width="162" height="17"/>
+                                                        <rect key="frame" x="0.0" y="118" width="192" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" name="colorPrimaryLight"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
@@ -403,6 +413,7 @@
                                                 <constraints>
                                                     <constraint firstItem="HY2-lg-3aU" firstAttribute="height" secondItem="MGj-8z-Qdu" secondAttribute="height" id="6FN-hs-CaR"/>
                                                     <constraint firstItem="HY2-lg-3aU" firstAttribute="height" secondItem="y2L-Qr-9bx" secondAttribute="height" id="LN8-31-QFw"/>
+                                                    <constraint firstItem="TkR-hU-Xxx" firstAttribute="height" secondItem="HY2-lg-3aU" secondAttribute="height" multiplier="0.75" id="Pxe-eR-6vr"/>
                                                     <constraint firstItem="HY2-lg-3aU" firstAttribute="height" secondItem="XqD-RN-7d8" secondAttribute="height" id="QQB-AX-vSN"/>
                                                     <constraint firstItem="HY2-lg-3aU" firstAttribute="height" secondItem="zuB-91-ZIK" secondAttribute="height" id="q7S-p5-oQh"/>
                                                     <constraint firstItem="HY2-lg-3aU" firstAttribute="height" secondItem="6Ps-f9-6EJ" secondAttribute="height" id="xKe-Nc-EIE"/>
@@ -434,7 +445,7 @@
                                             <constraint firstAttribute="trailing" secondItem="7cQ-Pt-TbZ" secondAttribute="trailing" constant="15" id="aLt-ip-XVr"/>
                                             <constraint firstItem="bOf-nk-qyZ" firstAttribute="top" secondItem="LH1-Hc-XZz" secondAttribute="bottom" id="afn-KW-0GD"/>
                                             <constraint firstAttribute="trailing" secondItem="LH1-Hc-XZz" secondAttribute="trailing" id="dCr-ri-pom"/>
-                                            <constraint firstItem="KIs-ie-EV2" firstAttribute="width" secondItem="gh8-yX-ZXm" secondAttribute="width" multiplier="3" id="dDM-Ui-sVu"/>
+                                            <constraint firstItem="KIs-ie-EV2" firstAttribute="width" secondItem="gh8-yX-ZXm" secondAttribute="width" multiplier="3" constant="30" id="dDM-Ui-sVu"/>
                                             <constraint firstItem="uLp-eY-T3g" firstAttribute="top" secondItem="Zzx-4C-5ni" secondAttribute="bottom" constant="24" id="fyn-IY-2nq"/>
                                             <constraint firstItem="LH1-Hc-XZz" firstAttribute="top" secondItem="IHr-z0-bcC" secondAttribute="top" id="gWp-eR-t90"/>
                                             <constraint firstItem="BPa-ej-U8O" firstAttribute="leading" secondItem="IHr-z0-bcC" secondAttribute="leading" id="hfH-Uu-6IJ"/>
