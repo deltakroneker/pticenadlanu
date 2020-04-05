@@ -10,7 +10,7 @@ import Foundation
 
 struct Bird: Codable {
     let n: String
-    let naucniNazivVrste, srpskiNazivVrste, sinonimi, porodica: String
+    let naucniNazivVrste, srpskiNazivVrste, sinonimi, porodica, engleskiNazivVrste: String
     let ilustracije, ilustracijeZenke, silueta, staniste: String
     let boje, bojeZenke: String
     let glavniTekst: String
@@ -77,6 +77,7 @@ struct Bird: Codable {
         case autorLetnogZova          = "Autor  - let"
         case autorZovaUzbune          = "Autor - uzbuna"
         case autorZovaMladih          = "Autor - zov mladih"
+        case engleskiNazivVrste       = "Engleski naziv vrste"
     }
 }
 

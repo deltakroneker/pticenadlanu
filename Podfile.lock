@@ -18,7 +18,7 @@ DEPENDENCIES:
   - SwiftCSV (~> 0.5)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - Differentiator
     - FontAwesome.swift
     - RxCocoa
@@ -36,4 +36,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: da1abf62775a565f2bc233b97ba51a0c34e3b85f
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

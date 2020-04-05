@@ -87,7 +87,7 @@ class HomeViewController: UIViewController, Storyboarded {
     fileprivate func setupController() {
         navBarLeftItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white,
                                                NSAttributedString.Key.font: UIFont(name: "OpenSans-SemiBold", size: 20)!], for: .disabled)
-        resultButton.layer.cornerRadius = 5
+        resultButton.layer.cornerRadius = 25
         resultButton.layer.masksToBounds = false
         
         for view in lineViews { view.layer.cornerRadius = view.frame.height / 2 }

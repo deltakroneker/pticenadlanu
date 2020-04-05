@@ -31,6 +31,7 @@ class AboutAppViewController: UIViewController, Storyboarded {
     @IBOutlet var xenoCantoButton: UIButton!
     @IBOutlet var authorsButton: UIButton!
     @IBOutlet var videosButton: UIButton!
+    @IBOutlet var allVideosButton: UIButton!
     
     // MARK: - Vars & Lets
     
@@ -125,6 +126,14 @@ class AboutAppViewController: UIViewController, Storyboarded {
                     UIApplication.shared.open(url)
                 }
             }).disposed(by: bag)
+        
+        allVideosButton.rx.tap
+        .subscribe(onNext: { _ in
+            DispatchQueue.main.async {
+                guard let url = URL(string: "https://www.youtube.com/channel/UCFvv0UY4YL5921CfEXkETNA") else { return }
+                UIApplication.shared.open(url)
+            }
+        }).disposed(by: bag)
     }
     
     fileprivate func shareAppLink() {
