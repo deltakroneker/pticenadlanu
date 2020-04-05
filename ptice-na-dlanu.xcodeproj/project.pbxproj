@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35601319243A3AE900920CAB /* AdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35601318243A3AE900920CAB /* AdviceViewController.swift */; };
 		7712C1922358F79C003B2408 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7712C1912358F79C003B2408 /* VideoViewController.swift */; };
 		7712C1942358F8C9003B2408 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7712C1932358F8C9003B2408 /* WebKit.framework */; };
 		779CC9AE23E8C5B000091773 /* AuthorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779CC9AD23E8C5B000091773 /* AuthorsViewController.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		2439F4130064B5FA5ABA73A5 /* Pods-ptice-na-dlanu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ptice-na-dlanu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ptice-na-dlanu/Pods-ptice-na-dlanu.debug.xcconfig"; sourceTree = "<group>"; };
+		35601318243A3AE900920CAB /* AdviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceViewController.swift; sourceTree = "<group>"; };
 		756771D2E459B5E00BBE93E9 /* Pods_ptice_na_dlanu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ptice_na_dlanu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7712C1912358F79C003B2408 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		7712C1932358F8C9003B2408 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -191,6 +193,7 @@
 				D20E7D0122EF3E6E00439068 /* AboutAppViewController.swift */,
 				D20E7D0322EF3E9F00439068 /* AboutUsViewController.swift */,
 				779CC9AD23E8C5B000091773 /* AuthorsViewController.swift */,
+				35601318243A3AE900920CAB /* AdviceViewController.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				D2A296EA22DCD3DE00F17B2D /* DetailsViewController.swift in Sources */,
 				D2E985D1225DEA1200C7994C /* HomeViewModel.swift in Sources */,
 				D2E985CB225DE8A200C7994C /* Coordinator.swift in Sources */,
+				35601319243A3AE900920CAB /* AdviceViewController.swift in Sources */,
 				D20E7D0222EF3E6E00439068 /* AboutAppViewController.swift in Sources */,
 				D2E985C9225DE8A200C7994C /* AppCoordinator.swift in Sources */,
 				D2E985B4225DDE7400C7994C /* AppDelegate.swift in Sources */,

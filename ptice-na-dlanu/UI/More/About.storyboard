@@ -703,6 +703,21 @@
             </objects>
             <point key="canvasLocation" x="2640" y="-217"/>
         </scene>
+        <!--Advice View Controller-->
+        <scene sceneID="JSb-JZ-M3d">
+            <objects>
+                <viewController storyboardIdentifier="AdviceViewController" id="Ucd-bS-vbF" customClass="AdviceViewController" customModule="ptice_na_dlanu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S1Z-7Y-Uv9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eUy-UL-HDS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Jj-LK-kQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3412" y="-216"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BLI_crna" width="512" height="512"/>

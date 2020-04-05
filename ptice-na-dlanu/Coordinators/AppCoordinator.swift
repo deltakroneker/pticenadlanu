@@ -73,6 +73,13 @@ extension AppCoordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func adviceCellPressed() {
+        let vc = AdviceViewController.instantiate(from: .about)
+        vc.coordinator = self
+        vc.title = "10 saveta za posmatranje ptica"
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func videoButtonPressed(_ link: String) {
         let vc = VideoViewController.instantiate(from: .details)
         vc.coordinator = self

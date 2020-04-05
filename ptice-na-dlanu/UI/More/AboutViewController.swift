@@ -39,7 +39,7 @@ class AboutViewController: UIViewController, Storyboarded {
     // MARK: - Methods
 
     fileprivate func setupBindings() {
-        Observable.just([SectionModel<String, String>(model: "", items: ["O aplikaciji", "O nama"])])
+        Observable.just([SectionModel<String, String>(model: "", items: ["O aplikaciji", "O nama", "Saveti za posmatranje ptica"])])
             .bind(to: optionsTableView.rx.items(dataSource: optionsDataSource))
             .disposed(by: bag)
         
@@ -48,6 +48,7 @@ class AboutViewController: UIViewController, Storyboarded {
                 switch ($0.row) {
                 case 0: self.coordinator?.applicationInfoCellPressed()
                 case 1: self.coordinator?.aboutUsCellPressed()
+                case 2: self.coordinator?.adviceCellPressed()
                 default: break
                 }
             }).disposed(by: bag)
