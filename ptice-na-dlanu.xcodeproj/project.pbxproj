@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35152B6B243B353F00D513D8 /* AdviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35152B6A243B353F00D513D8 /* AdviceCell.swift */; };
+		35152B6D243B42A400D513D8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35152B6C243B42A300D513D8 /* Extensions.swift */; };
 		35601319243A3AE900920CAB /* AdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35601318243A3AE900920CAB /* AdviceViewController.swift */; };
 		7712C1922358F79C003B2408 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7712C1912358F79C003B2408 /* VideoViewController.swift */; };
 		7712C1942358F8C9003B2408 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7712C1932358F8C9003B2408 /* WebKit.framework */; };
@@ -51,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		2439F4130064B5FA5ABA73A5 /* Pods-ptice-na-dlanu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ptice-na-dlanu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ptice-na-dlanu/Pods-ptice-na-dlanu.debug.xcconfig"; sourceTree = "<group>"; };
+		35152B6A243B353F00D513D8 /* AdviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceCell.swift; sourceTree = "<group>"; };
+		35152B6C243B42A300D513D8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		35601318243A3AE900920CAB /* AdviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceViewController.swift; sourceTree = "<group>"; };
 		756771D2E459B5E00BBE93E9 /* Pods_ptice_na_dlanu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ptice_na_dlanu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7712C1912358F79C003B2408 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				D2B2CA4F2268DA1C00DED1E2 /* ItemGradientLayer.swift */,
 				D202E03F225E002300F6CE57 /* ImageWithTitleCell.swift */,
 				D2A833C422DF5B6300F33C53 /* ImageCell.swift */,
+				35152B6A243B353F00D513D8 /* AdviceCell.swift */,
 			);
 			path = "Custom views";
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 			children = (
 				D2E985C7225DE8A200C7994C /* Storyboarded.swift */,
 				D2E985C8225DE8A200C7994C /* Coordinator.swift */,
+				35152B6C243B42A300D513D8 /* Extensions.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -410,6 +416,7 @@
 				D2E985CF225DE92D00C7994C /* HomeViewController.swift in Sources */,
 				D2A833C522DF5B6300F33C53 /* ImageCell.swift in Sources */,
 				D2B2CA502268DA1C00DED1E2 /* ItemGradientLayer.swift in Sources */,
+				35152B6B243B353F00D513D8 /* AdviceCell.swift in Sources */,
 				D205DBCB22DB4B2B00D46079 /* Item.swift in Sources */,
 				7712C1922358F79C003B2408 /* VideoViewController.swift in Sources */,
 				779CC9AE23E8C5B000091773 /* AuthorsViewController.swift in Sources */,
@@ -425,6 +432,7 @@
 				D20E7D0222EF3E6E00439068 /* AboutAppViewController.swift in Sources */,
 				D2E985C9225DE8A200C7994C /* AppCoordinator.swift in Sources */,
 				D2E985B4225DDE7400C7994C /* AppDelegate.swift in Sources */,
+				35152B6D243B42A400D513D8 /* Extensions.swift in Sources */,
 				D2E985CA225DE8A200C7994C /* Storyboarded.swift in Sources */,
 				D202E044225E080D00F6CE57 /* FeatherColor.swift in Sources */,
 				D20E7D0422EF3E9F00439068 /* AboutUsViewController.swift in Sources */,

@@ -17,16 +17,22 @@ struct AuthorData {
 
 class AuthorsViewController: UIViewController, Storyboarded {
 
+    // MARK: - Outlets
     @IBOutlet var authorsTable: UITableView!
     
+    // MARK: - Vars & Lets
     var dataSource = [AuthorData]()
 
     weak var coordinator: AppCoordinator?
+    
+    // MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
     }
+    
+    // MARK: - Methods
     
     fileprivate func loadData() {
         dataSource.removeAll()
@@ -64,6 +70,8 @@ class AuthorsViewController: UIViewController, Storyboarded {
     }
 }
 
+// MARK: - TableView
+
 extension AuthorsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
@@ -79,6 +87,8 @@ extension AuthorsViewController: UITableViewDataSource {
         return cell
     }
 }
+
+// MARK: - TableViewDelegate
 
 extension AuthorsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

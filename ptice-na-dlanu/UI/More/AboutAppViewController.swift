@@ -94,7 +94,7 @@ class AboutAppViewController: UIViewController, Storyboarded {
         shareTap.rx.event
             .subscribe(onNext: { _ in
                 DispatchQueue.main.async {
-                    self.shareAppLink()
+                    self.shareApp(message: "Preuzmite aplikaciju „Ptice na dlanu“", sourceView: self.shareLabel)
                 }
             }).disposed(by: bag)
         
@@ -134,18 +134,5 @@ class AboutAppViewController: UIViewController, Storyboarded {
                 UIApplication.shared.open(url)
             }
         }).disposed(by: bag)
-    }
-    
-    fileprivate func shareAppLink() {
-        let appleID = "1483736814"
-        let appText = "Preuzmite aplikaciju Ptice na dlanu"
-        
-        if let appLink = URL(string: "https://itunes.apple.com/us/app/myapp/id\(appleID)?ls=1&mt=8"), !appLink.absoluteString.isEmpty {
-            
-            let activityViewController = UIActivityViewController(activityItems: [appLink, appText], applicationActivities: nil)
-            activityViewController.popoverPresentationController?.sourceView = shareLabel
-            activityViewController.popoverPresentationController?.sourceRect = shareLabel.frame
-            self.present(activityViewController, animated: true, completion: nil)
-        }
     }
 }
