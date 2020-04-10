@@ -58,6 +58,26 @@ class AboutAppViewController: UIViewController, Storyboarded {
         rateLabel.attributedText = NSAttributedString(string: "Ocenite nas na App Store",
                                                       attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         
+        videosButton.setAttributedTitle(NSAttributedString(string: "Video snimci ptica: Aleksandar Topalov.", attributes: [
+            .underlineStyle: NSUnderlineStyle.single.rawValue,
+            NSAttributedString.Key.foregroundColor: UIColor.init(named: "colorAccent")!
+        ]), for: .normal)
+        
+        allVideosButton.setAttributedTitle(NSAttributedString(string: "Pogledajte sve video snimke na našem kanalu.", attributes: [
+            .underlineStyle: NSUnderlineStyle.single.rawValue,
+            NSAttributedString.Key.foregroundColor: UIColor.init(named: "colorAccent")!
+        ]), for: .normal)
+        
+        authorsButton.setAttributedTitle(NSAttributedString(string: "Spisak autora možete pogledati ovde.", attributes: [
+            .underlineStyle: NSUnderlineStyle.single.rawValue,
+            NSAttributedString.Key.foregroundColor: UIColor.init(named: "colorAccent")!
+        ]), for: .normal)
+        
+        xenoCantoButton.setAttributedTitle(NSAttributedString(string: "Zvuci ptica su preuzeti sa sajta xeno-canto.", attributes: [
+            .underlineStyle: NSUnderlineStyle.single.rawValue,
+            NSAttributedString.Key.foregroundColor: UIColor.init(named: "colorAccent")!
+        ]), for: .normal)
+        
         likeImageView.image = UIImage.fontAwesomeIcon(name: .thumbsUp,
                                                       style: .solid,
                                                       textColor: UIColor(named: "blue") ?? .blue,

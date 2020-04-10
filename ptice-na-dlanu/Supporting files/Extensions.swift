@@ -10,14 +10,16 @@ import UIKit
 
 extension UIViewController {
     func shareApp(message: String, sourceView: UIView? = nil) {
-        let appleID = "1483736814"
-        
-        if let appLink = URL(string: "https://itunes.apple.com/us/app/myapp/id\(appleID)?ls=1&mt=8"), !appLink.absoluteString.isEmpty {
+        DispatchQueue.main.async {
+            let appleID = "1483736814"
             
-            let activityViewController = UIActivityViewController(activityItems: [appLink, message], applicationActivities: nil)
-            activityViewController.popoverPresentationController?.sourceView = sourceView ?? self.view
-            activityViewController.popoverPresentationController?.sourceRect = sourceView?.frame ?? CGRect.init(x: self.view.frame.midX - 1, y: self.view.frame.midY - 1, width: 2, height: 2)
-            self.present(activityViewController, animated: true, completion: nil)
+            if let appLink = URL(string: "https://itunes.apple.com/us/app/myapp/id\(appleID)?ls=1&mt=8"), !appLink.absoluteString.isEmpty {
+                
+                let activityViewController = UIActivityViewController(activityItems: [appLink, message], applicationActivities: nil)
+                activityViewController.popoverPresentationController?.sourceView = sourceView ?? self.view
+                activityViewController.popoverPresentationController?.sourceRect = sourceView?.frame ?? CGRect.init(x: self.view.frame.midX - 1, y: self.view.frame.midY - 1, width: 2, height: 2)
+                self.present(activityViewController, animated: true, completion: nil)
+            }
         }
     }
 }

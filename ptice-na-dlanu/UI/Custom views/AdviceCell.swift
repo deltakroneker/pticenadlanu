@@ -32,6 +32,16 @@ class AdviceCell: UITableViewCell {
                 titleLabel.text = advice.title
                 explanationLabel.text = advice.explanation
                 
+                if advice.imageName == "illustration_share" {
+                    adviceImage.image = UIImage.init(named: advice.imageName)?.withRenderingMode(.alwaysTemplate)
+                    adviceImage.tintColor = UIColor.init(named: "colorAccent")
+                }
+                else {
+                    adviceImage.image = UIImage.init(named: advice.imageName)?.withRenderingMode(.alwaysOriginal)
+                    adviceImage.tintColor = UIColor.init(named: "colorPrimary")
+                }
+                
+                
                 if advice.isCollapsed {
                     collapseButton.setImage(UIImage.init(named: "plus"), for: .normal)
                     explanationLabel.isHidden = true
@@ -41,7 +51,7 @@ class AdviceCell: UITableViewCell {
                 else {
                     collapseButton.setImage(UIImage.init(named: "minus"), for: .normal)
                     explanationLabel.isHidden = false
-                    adviceImage.isHidden = false
+                    adviceImage.isHidden = adviceImage.image == nil
                     shareButton.isHidden = !advice.showShare
                 }
             }
@@ -52,17 +62,22 @@ class AdviceCell: UITableViewCell {
         super.awakeFromNib()
         
         let tap = UITapGestureRecognizer.init(target: self, action: #selector(cardTapped))
+        let imageTap = UITapGestureRecognizer.init(target: self, action: #selector(shareImageTapped))
         
         titleLabel.addGestureRecognizer(tap)
+        adviceImage.addGestureRecognizer(imageTap)
         collapseButton.addTarget(self, action: #selector(cardTapped), for: .touchUpInside)
         shareButton.addTarget(self, action: #selector(shareTapped), for: .touchUpInside)
+        shareButton.setAttributedTitle(NSAttributedString(string: "Preporuči aplikaciju „Ptice na dlanu“ svojim prijateljima ili pratiocima", attributes: [
+            .underlineStyle: NSUnderlineStyle.single.rawValue,
+            NSAttributedString.Key.foregroundColor: UIColor.init(named: "colorAccent")!
+        ]), for: .normal)
         
         cardView.layer.cornerRadius = 2
         cardView.layer.shadowColor = UIColor.init(named: "darkGray")!.cgColor
         cardView.layer.shadowOffset = CGSize.init(width: 0, height: 0)
         cardView.layer.shadowRadius = 3
         cardView.layer.shadowOpacity = 0.6
-        
     }
  
     @objc private func cardTapped() {
@@ -73,6 +88,12 @@ class AdviceCell: UITableViewCell {
     
     @objc private func shareTapped() {
         delegate?.shareTapped()
+    }
+    
+    @objc private func shareImageTapped() {
+        if let imageName = advice?.imageName, imageName == "illustration_share" {
+            delegate?.shareTapped()
+        }
     }
 }
 
