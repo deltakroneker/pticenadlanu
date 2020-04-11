@@ -29,7 +29,6 @@ class ListViewModel {
             .map({ (matchedBirds, searchText) -> [BirdItem] in
                 matchedBirds.filter { self.birdSearchFilter(bird: $0.bird, text: searchText) }
             })
-            .share()
             
         let birdDataSource = birdData
             .map { [SectionModel<String, BirdItem>.init(model: "", items: $0)] }
