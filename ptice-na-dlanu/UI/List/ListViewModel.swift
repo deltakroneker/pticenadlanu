@@ -21,16 +21,24 @@ class ListViewModel {
     
     struct Output {
         let matchedBirdsData: Observable<[SectionModel<String, BirdItem>]>
+        let resultCountTitle: Observable<String>
     }
     
     func transform(input: Input) -> Output {
-        let birdDataSource = Observable.combineLatest(matchedBirds, input.searchText)
+        let birdData = Observable.combineLatest(matchedBirds, input.searchText)
             .map({ (matchedBirds, searchText) -> [BirdItem] in
                 matchedBirds.filter { self.birdSearchFilter(bird: $0.bird, text: searchText) }
             })
+            .share()
+            
+        let birdDataSource = birdData
             .map { [SectionModel<String, BirdItem>.init(model: "", items: $0)] }
 
-        return Output(matchedBirdsData: birdDataSource)
+        let resultCountTitle = birdData
+            .map { $0.count.description }
+            .map { ($0.last == "1" && $0.dropLast().last != "1") ? "\($0) REZULTAT" : "\($0) REZULTATA" }
+        
+        return Output(matchedBirdsData: birdDataSource, resultCountTitle: resultCountTitle)
     }
     
     func birdSearchFilter(bird: Bird, text: String) -> Bool {

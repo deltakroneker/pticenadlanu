@@ -58,6 +58,10 @@ class ListViewController: UIViewController, Storyboarded {
         let input = ListViewModel.Input(searchText: searchBar.rx.text.orEmpty.asObservable())
         let output = viewModel.transform(input: input)
         
+        output.resultCountTitle
+            .bind(to: self.rx.title)
+            .disposed(by: bag)
+        
         output.matchedBirdsData
             .bind(to: birdCollectionView.rx.items(dataSource: birdDataSource))
             .disposed(by: bag)
