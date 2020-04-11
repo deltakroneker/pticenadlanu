@@ -82,19 +82,19 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="922"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXu-fC-ugz">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="933"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1023.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Videli ste pticu, a ne znate kojoj vrsti pripada?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5i-52-T9l">
-                                                <rect key="frame" x="15" y="15" width="384" height="17.5"/>
+                                                <rect key="frame" x="15" y="15" width="384" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans SemiBold" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MpO-Of-aa9">
-                                                <rect key="frame" x="15" y="75" width="384" height="115.5"/>
+                                                <rect key="frame" x="15" y="81" width="384" height="120.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mlQ-kd-QYZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="115.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="120.5"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_oblik" translatesAutoresizingMaskIntoConstraints="NO" id="BIe-VW-Gqm">
                                                                 <rect key="frame" x="20.5" y="0.0" width="80" height="80"/>
@@ -104,7 +104,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kakvog je oblika bila?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfH-F0-dt5">
-                                                                <rect key="frame" x="11.5" y="85" width="98" height="30.5"/>
+                                                                <rect key="frame" x="11.5" y="85" width="98" height="35.5"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                                                 <color key="textColor" name="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -113,7 +113,7 @@
                                                         <viewLayoutGuide key="safeArea" id="bdL-OE-enX"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IzI-M7-ElF">
-                                                        <rect key="frame" x="131.5" y="0.0" width="121" height="115.5"/>
+                                                        <rect key="frame" x="131.5" y="0.0" width="121" height="120.5"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_habitat" translatesAutoresizingMaskIntoConstraints="NO" id="rm5-aZ-oAP">
                                                                 <rect key="frame" x="20.5" y="0.0" width="80" height="80"/>
@@ -122,7 +122,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gde ste je videli?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUM-Zc-g79">
-                                                                <rect key="frame" x="11.5" y="85" width="98" height="30.5"/>
+                                                                <rect key="frame" x="11.5" y="85" width="98" height="35.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="98" id="N6t-MA-VEh"/>
                                                                 </constraints>
@@ -134,7 +134,7 @@
                                                         <viewLayoutGuide key="safeArea" id="6Io-ws-gDr"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="p8Q-pb-v9M">
-                                                        <rect key="frame" x="262.5" y="0.0" width="121.5" height="115.5"/>
+                                                        <rect key="frame" x="262.5" y="0.0" width="121.5" height="120.5"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_boje" translatesAutoresizingMaskIntoConstraints="NO" id="fNe-rT-VQg">
                                                                 <rect key="frame" x="21" y="0.0" width="80" height="80"/>
@@ -143,7 +143,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Koje boje je imala na sebi?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-l8-YWI">
-                                                                <rect key="frame" x="12" y="85" width="98" height="30.5"/>
+                                                                <rect key="frame" x="12" y="85" width="98" height="35.5"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                                                 <color key="textColor" name="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -159,56 +159,56 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prisetite se:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rT-eZ-fjX">
-                                                <rect key="frame" x="15" y="40.5" width="384" height="17.5"/>
+                                                <rect key="frame" x="15" y="43.5" width="384" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="... a mi ćemo vam pokazati spisak mogućih vrsta!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQF-bI-5HJ">
-                                                <rect key="frame" x="15" y="220.5" width="384" height="17.5"/>
+                                                <rect key="frame" x="15" y="231.5" width="384" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Projekat &quot;Ptice na dlanu&quot;  jedan je od 10 pobednika konkursa Centrifuga za 2017. u okviru programa Superste." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVt-wm-bD6">
-                                                <rect key="frame" x="15" y="258" width="384" height="52.5"/>
+                                                <rect key="frame" x="15" y="272" width="384" height="61.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="superste" translatesAutoresizingMaskIntoConstraints="NO" id="1bd-0h-TbR">
-                                                <rect key="frame" x="45" y="320.5" width="324" height="80"/>
+                                                <rect key="frame" x="45" y="343.5" width="324" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="Y13-iT-nGE"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Projekat realizovalo: Društvo za zaštitu i proučavanje ptica Srbije." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DW-sM-XGs">
-                                                <rect key="frame" x="15" y="410.5" width="384" height="35"/>
+                                                <rect key="frame" x="15" y="433.5" width="384" height="41"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans SemiBold" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U razvoju aplikacije učestvovao je tim sastavljen od tekstopisaca, dizajnera, developera, ilustratora i ornitologa." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LF9-rb-wcf">
-                                                <rect key="frame" x="15" y="453.5" width="384" height="52.5"/>
+                                                <rect key="frame" x="15" y="482.5" width="384" height="61.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYR-yx-bOm">
-                                                <rect key="frame" x="15" y="522" width="384" height="87.5"/>
-                                                <string key="text">• Stručni saradnici i urednici informacija o pticama: Draženko Rajković, Uroš Pantović i Radislav Mirić.
+                                                <rect key="frame" x="15" y="560" width="384" height="123"/>
+                                                <mutableString key="text">• Stručni saradnici i urednici informacija o pticama: Draženko Rajković, Uroš Pantović, Radislav Mirić i Milica Krmar.
 • Algoritam za prepoznavanje ptica: Saša Rajkov. 
 • Grafički dizajn: Kalman Moldvai. 
-• Tehnički razvoj aplikacije: Jelena Krmar i Nikola Milić.</string>
+• Tehnički razvoj aplikacije: Jelena Krmar i Nikola Milić.</mutableString>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YSI-aV-X7I">
-                                                <rect key="frame" x="15" y="807.5" width="384" height="75.5"/>
+                                                <rect key="frame" x="15" y="893" width="384" height="80.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4HU-gD-qb3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="75.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="80.5"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="razanj_l" translatesAutoresizingMaskIntoConstraints="NO" id="gj5-bK-jeQ">
                                                                 <rect key="frame" x="42.5" y="0.0" width="40" height="40"/>
@@ -218,7 +218,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lajkujte našu stranicu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjK-mp-qeo">
-                                                                <rect key="frame" x="13.5" y="45" width="98" height="30.5"/>
+                                                                <rect key="frame" x="13.5" y="45" width="98" height="35.5"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                                                 <color key="textColor" name="blue"/>
                                                                 <nil key="highlightedColor"/>
@@ -227,7 +227,7 @@
                                                         <viewLayoutGuide key="safeArea" id="t8e-8A-boU"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3nV-9F-9la">
-                                                        <rect key="frame" x="129.5" y="0.0" width="125" height="75.5"/>
+                                                        <rect key="frame" x="129.5" y="0.0" width="125" height="80.5"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="razanj_l" translatesAutoresizingMaskIntoConstraints="NO" id="MoI-cU-L3A">
                                                                 <rect key="frame" x="42.5" y="0.0" width="40" height="40"/>
@@ -236,7 +236,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Podelite s prijateljima" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgk-1D-VOP">
-                                                                <rect key="frame" x="13.5" y="45" width="98" height="30.5"/>
+                                                                <rect key="frame" x="13.5" y="45" width="98" height="35.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="98" id="z5J-vF-lQo"/>
                                                                 </constraints>
@@ -248,7 +248,7 @@
                                                         <viewLayoutGuide key="safeArea" id="jdh-zl-Tpv"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0zd-Lf-B3b">
-                                                        <rect key="frame" x="259.5" y="0.0" width="124.5" height="75.5"/>
+                                                        <rect key="frame" x="259.5" y="0.0" width="124.5" height="80.5"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="razanj_l" translatesAutoresizingMaskIntoConstraints="NO" id="i5j-uU-iz0">
                                                                 <rect key="frame" x="42" y="0.0" width="40" height="40"/>
@@ -257,7 +257,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ocenite nas na App Store" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zZ-aI-Mfx">
-                                                                <rect key="frame" x="13" y="45" width="98" height="30.5"/>
+                                                                <rect key="frame" x="13" y="45" width="98" height="35.5"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                                                 <color key="textColor" name="colorPrimaryDark"/>
                                                                 <nil key="highlightedColor"/>
@@ -273,17 +273,17 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="yAf-hR-mk3">
-                                                <rect key="frame" x="15" y="629.5" width="384" height="64"/>
+                                                <rect key="frame" x="15" y="703" width="384" height="70"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="FxZ-sq-p90">
-                                                        <rect key="frame" x="0.0" y="0.0" width="265" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="33"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                         <state key="normal" title="Video snimci ptica: Aleksandar Topalov.">
                                                             <color key="titleColor" name="colorAccent"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ch9-6b-czA">
-                                                        <rect key="frame" x="0.0" y="34" width="261" height="30"/>
+                                                        <rect key="frame" x="0.0" y="37" width="269" height="33"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                         <state key="normal" title="Pogledajte sve videe na našem kanalu.">
                                                             <color key="titleColor" name="colorAccent"/>
@@ -292,17 +292,17 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5aT-lL-tqc">
-                                                <rect key="frame" x="15" y="713.5" width="384" height="64"/>
+                                                <rect key="frame" x="15" y="793" width="384" height="70"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="I6f-vC-g5x">
-                                                        <rect key="frame" x="0.0" y="0.0" width="292" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="299" height="33"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                         <state key="normal" title="Zvuci ptica su preuzeti sa sajta xeno-canto.">
                                                             <color key="titleColor" name="colorAccent"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="6rA-zz-jFt">
-                                                        <rect key="frame" x="0.0" y="34" width="254" height="30"/>
+                                                        <rect key="frame" x="0.0" y="37" width="263" height="33"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                         <state key="normal" title="Spisak autora možete pogledati ovde.">
                                                             <color key="titleColor" name="colorAccent"/>
@@ -404,69 +404,69 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="922"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68w-J9-v4T">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="692.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="731.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOp-pS-6VN">
-                                                <rect key="frame" x="15" y="15" width="384" height="52.5"/>
+                                                <rect key="frame" x="15" y="15" width="384" height="61.5"/>
                                                 <string key="text">Društvo za zaštitu i proučavanje ptica Srbije bavi se zaštitom ptica i njihovih staništa, kao i širenjem znanja o pticama i njihovim potrebama.</string>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_hranilica" translatesAutoresizingMaskIntoConstraints="NO" id="gsO-5k-1Qi">
-                                                <rect key="frame" x="30" y="83.5" width="354" height="100"/>
+                                                <rect key="frame" x="30" y="92.5" width="354" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="Al8-wq-muO"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pronašli ste pticu kojoj treba pomoć? " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1b-1q-dLC">
-                                                <rect key="frame" x="15" y="199.5" width="384" height="17.5"/>
+                                                <rect key="frame" x="15" y="208.5" width="384" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pogledajte naš poster sa uputstvima." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pi-zZ-4aN">
-                                                <rect key="frame" x="15" y="225" width="384" height="17.5"/>
+                                                <rect key="frame" x="15" y="237" width="384" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                 <color key="textColor" name="colorAccent"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pridružite nam se - naše jato uvek rado prihvata nove članove! :)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kj5-ea-fxT">
-                                                <rect key="frame" x="15" y="250.5" width="384" height="35"/>
+                                                <rect key="frame" x="15" y="265.5" width="384" height="41"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans SemiBold" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barska_kokica" translatesAutoresizingMaskIntoConstraints="NO" id="UWw-ZT-B7L">
-                                                <rect key="frame" x="20" y="304" width="40" height="40"/>
+                                                <rect key="frame" x="20" y="328" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="I5Y-eK-Dce"/>
                                                     <constraint firstAttribute="width" secondItem="UWw-ZT-B7L" secondAttribute="height" multiplier="1:1" id="rHU-w3-WBP"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barska_kokica" translatesAutoresizingMaskIntoConstraints="NO" id="Gvy-qS-tdk">
-                                                <rect key="frame" x="20" y="357" width="40" height="40"/>
+                                                <rect key="frame" x="20" y="387" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Gvy-qS-tdk" secondAttribute="height" multiplier="1:1" id="Qxq-0L-Jmn"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barska_kokica" translatesAutoresizingMaskIntoConstraints="NO" id="RCj-cT-5x9">
-                                                <rect key="frame" x="20" y="410" width="40" height="40"/>
+                                                <rect key="frame" x="20" y="446" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="RCj-cT-5x9" secondAttribute="height" multiplier="1:1" id="dPG-aA-kMP"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4Qz-Sz-FaX">
-                                                <rect key="frame" x="75" y="305.5" width="329" height="37"/>
+                                                <rect key="frame" x="75" y="326.5" width="329" height="43"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partizanskih baza 6/43, Novi Sad, Srbija" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIx-EI-Vif">
-                                                        <rect key="frame" x="0.0" y="0.0" width="329" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="329" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Makedonska 4, Beograd, Srbija" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygh-pR-oAB">
-                                                        <rect key="frame" x="0.0" y="19.5" width="329" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="22.5" width="329" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -474,16 +474,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gKz-qk-E9J">
-                                                <rect key="frame" x="75" y="358.5" width="92" height="37"/>
+                                                <rect key="frame" x="75" y="385.5" width="94" height="43"/>
                                                 <subviews>
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="021 302 3362" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d0-01-7LQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="92" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                         <color key="textColor" name="colorAccent"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="011 334 3902" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iB-nZ-NrB">
-                                                        <rect key="frame" x="0.0" y="19.5" width="92" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="22.5" width="94" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                         <color key="textColor" name="colorAccent"/>
                                                         <nil key="highlightedColor"/>
@@ -491,16 +491,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Awt-Gt-e2e">
-                                                <rect key="frame" x="75" y="411.5" width="152" height="37"/>
+                                                <rect key="frame" x="75" y="444.5" width="161" height="43"/>
                                                 <subviews>
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pticesrbije.rs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMV-rK-y4F">
-                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="161" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                         <color key="textColor" name="colorAccent"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sekretar@pticesrbije.rs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KW-sw-zov">
-                                                        <rect key="frame" x="0.0" y="19.5" width="152" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="22.5" width="161" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                         <color key="textColor" name="colorAccent"/>
                                                         <nil key="highlightedColor"/>
@@ -508,7 +508,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="qGL-ID-5Fk">
-                                                <rect key="frame" x="102.5" y="496.5" width="209" height="26"/>
+                                                <rect key="frame" x="102.5" y="535.5" width="209" height="26"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1i-kc-uYR">
                                                         <rect key="frame" x="0.0" y="0.0" width="26" height="26"/>
@@ -547,7 +547,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yVT-wo-mfR">
-                                                <rect key="frame" x="69" y="542.5" width="276" height="130"/>
+                                                <rect key="frame" x="69" y="581.5" width="276" height="130"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DZPPS_crna" translatesAutoresizingMaskIntoConstraints="NO" id="l7b-Ra-Unu">
                                                         <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
@@ -748,25 +748,25 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blQ-sO-0CB">
-                                                    <rect key="frame" x="16" y="8" width="382" height="284.5"/>
+                                                    <rect key="frame" x="16" y="8" width="382" height="290.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="BrR-hK-IBe">
-                                                            <rect key="frame" x="16" y="16" width="356" height="252.5"/>
+                                                            <rect key="frame" x="16" y="16" width="356" height="258.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Me5-2K-8Dy">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="316" height="19"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="316" height="22"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans SemiBold" pointSize="16"/>
                                                                     <color key="textColor" name="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pv-l6-fXj">
-                                                                    <rect key="frame" x="0.0" y="31" width="356" height="17.5"/>
+                                                                    <rect key="frame" x="0.0" y="34" width="356" height="20.5"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                                                     <color key="textColor" name="filters"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="6Ux-pt-1hb">
-                                                                    <rect key="frame" x="0.0" y="60.5" width="356" height="60"/>
+                                                                    <rect key="frame" x="0.0" y="66.5" width="356" height="60"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="60" id="1Ny-kz-FXy"/>
                                                                     </constraints>
@@ -776,7 +776,7 @@
                                                                     </state>
                                                                 </button>
                                                                 <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illustration_clothes" translatesAutoresizingMaskIntoConstraints="NO" id="oQ2-CC-QWD">
-                                                                    <rect key="frame" x="0.0" y="132.5" width="356" height="120"/>
+                                                                    <rect key="frame" x="0.0" y="138.5" width="356" height="120"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="120" id="0ct-e5-5i0"/>
                                                                     </constraints>
