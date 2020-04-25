@@ -10,7 +10,8 @@ import UIKit
 
 extension UIViewController {
     func shareApp(message: String, sourceView: UIView? = nil) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             let appleID = "1483736814"
             
             if let appLink = URL(string: "https://itunes.apple.com/us/app/myapp/id\(appleID)?ls=1&mt=8"), !appLink.absoluteString.isEmpty {

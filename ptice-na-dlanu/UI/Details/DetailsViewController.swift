@@ -71,7 +71,7 @@ class DetailsViewController: UIViewController, Storyboarded {
     })
     
     // MARK: - Lifecycle Methods
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imageCollectionView.delegate = self
@@ -84,6 +84,9 @@ class DetailsViewController: UIViewController, Storyboarded {
     
     deinit {
         NotificationCenter.default.removeObserver(self)
+        self.audioPlayer?.currentItem?.removeObserver(self,
+                                                      forKeyPath: #keyPath(AVPlayerItem.status),
+                                                      context: &self.playerItemContext)
     }
     
     // MARK: - Methods
@@ -101,10 +104,10 @@ class DetailsViewController: UIViewController, Storyboarded {
     }
     
     @objc fileprivate func appWentToBackground() {
-        DispatchQueue.main.async {
-            self.audioPlayer?.rate = 0.0
-            self.audioPlayer?.pause()
-            self.audioButton.setImage(UIImage(named: "audio_start"), for: .normal)
+        DispatchQueue.main.async { [weak self] in
+            self?.audioPlayer?.rate = 0.0
+            self?.audioPlayer?.pause()
+            self?.audioButton.setImage(UIImage(named: "audio_start"), for: .normal)
         }
     }
     
@@ -230,8 +233,8 @@ class DetailsViewController: UIViewController, Storyboarded {
     }
     
     @objc func playerDidFinishPlaying() {
-        DispatchQueue.main.async {
-            self.audioButton.setImage(UIImage(named: "audio_start"), for: .normal)
+        DispatchQueue.main.async { [weak self] in
+            self?.audioButton.setImage(UIImage(named: "audio_start"), for: .normal)
         }
     }
 }
@@ -277,6 +280,8 @@ extension DetailsViewController {
                                change: [NSKeyValueChangeKey : Any]?,
                                context: UnsafeMutableRawPointer?) {
 
+        print("AY")
+        
         // Only handle observations for the playerItemContext
         guard context == &playerItemContext else {
             super.observeValue(forKeyPath: keyPath,

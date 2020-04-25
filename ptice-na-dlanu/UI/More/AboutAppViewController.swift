@@ -112,9 +112,9 @@ class AboutAppViewController: UIViewController, Storyboarded {
             }).disposed(by: bag)
         
         shareTap.rx.event
-            .subscribe(onNext: { _ in
-                DispatchQueue.main.async {
-                    self.shareApp(message: "Preuzmite aplikaciju „Ptice na dlanu“", sourceView: self.shareLabel)
+            .subscribe(onNext: { [weak self] _ in
+                DispatchQueue.main.async { [weak self] in
+                    self?.shareApp(message: "Preuzmite aplikaciju „Ptice na dlanu“", sourceView: self?.shareLabel)
                 }
             }).disposed(by: bag)
         
