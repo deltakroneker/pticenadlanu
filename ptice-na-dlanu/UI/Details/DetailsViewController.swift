@@ -280,7 +280,7 @@ extension DetailsViewController {
                                change: [NSKeyValueChangeKey : Any]?,
                                context: UnsafeMutableRawPointer?) {
 
-        print("AY")
+//        print("AY")
         
         // Only handle observations for the playerItemContext
         guard context == &playerItemContext else {
